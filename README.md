@@ -17,13 +17,13 @@ J'utilise python 3.9.18 pour utiliser les LLMs
 
 ``
 conda create --name "ProjectName" python=3.9.18 
-``
+``  
 `` 
 conda activate "ProjectName"  
-``
+``  
 ``
 conda install pip  
-``
+``  
 
 Pip permet d'installer le reste des modules. 
 
