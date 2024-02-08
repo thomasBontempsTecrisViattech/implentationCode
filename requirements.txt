@@ -5,3 +5,4 @@ pillow==10.2.0
 pytesseract==0.3.10
 transformers==4.37.2
 torch==2.2.0
+termcolor==2.4.0
