@@ -18,7 +18,7 @@ J'utilise python 3.9.18 pour utiliser les LLMs
 ``
 conda create --name "ProjectName" python=3.9.18 
 ``  
-`` 
+``
 conda activate "ProjectName"  
 ``  
 ``
@@ -27,11 +27,21 @@ conda install pip
 
 Pip permet d'installer le reste des modules. 
 
-`` 
+``
 pip install requirements.txt
 ``
 
 ### 3. Modifier le fichier variable.py
 Il est impératif de changer les variables afin que cela corresponde à votre dossier. 
 
+
+### 4. Lancer le programme
+Pour lancer le programme, veuillez réaliser cette commande : 
+
+``
+cd Your/Folder/Where/Main
+``  
+``
+py main.py
+``
 
