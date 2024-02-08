@@ -4,14 +4,15 @@ from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.shared import Inches
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_ALIGN_VERTICAL
 import json 
+from implentationCode.variable import LOGO_VIATTECH, FOLDER_JSON, FOLDER_DOCX
 
 
 
-def create_template(file_path, json_file):
+def create_template(json_file):
     print("################################### JSON To DOCX #####################################")
 
     ########### JSON file ##################
-    f = open(json_file)
+    f = open(FOLDER_JSON + '/' + json_file)
     jsonFile = json.load(f)
     f.close()
     personal_information = jsonFile["personal_information"]
@@ -45,7 +46,7 @@ def create_template(file_path, json_file):
 
     # Add the image to the left cell
     run_image = cell_image.paragraphs[0].add_run()
-    run_image.add_picture('implentationCode/Data/image/viattech_qs_logo.png', width=Inches(1.0))  # Replace 'your_image_path.jpg' with the actual image path
+    run_image.add_picture(LOGO_VIATTECH, width=Inches(1.0))  # Replace 'your_image_path.jpg' with the actual image path
 
     # Add the title to the right cell
     run_title = cell_title.paragraphs[0].add_run("Dossier Technique")
@@ -136,5 +137,5 @@ def create_template(file_path, json_file):
 
 
     # Save the document
-    doc.save(file_path)
-    print(f"Template créé et enregistré sous '{file_path}'")
+    doc.save(FOLDER_DOCX + '/' + json_file)
+    print(f"Template créé et enregistré sous '{FOLDER_DOCX + '/' + json_file}'")
