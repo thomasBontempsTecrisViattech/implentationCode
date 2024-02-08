@@ -8,6 +8,8 @@ import json
 
 
 def create_template(file_path, json_file):
+    print("################################### JSON To DOCX #####################################")
+
     ########### JSON file ##################
     f = open(json_file)
     jsonFile = json.load(f)
@@ -43,7 +45,7 @@ def create_template(file_path, json_file):
 
     # Add the image to the left cell
     run_image = cell_image.paragraphs[0].add_run()
-    run_image.add_picture('../Data/image/viattech_qs_logo.png', width=Inches(1.0))  # Replace 'your_image_path.jpg' with the actual image path
+    run_image.add_picture('implentationCode/Data/image/viattech_qs_logo.png', width=Inches(1.0))  # Replace 'your_image_path.jpg' with the actual image path
 
     # Add the title to the right cell
     run_title = cell_title.paragraphs[0].add_run("Dossier Technique")
