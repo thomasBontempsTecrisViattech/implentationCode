@@ -2,11 +2,16 @@ import os
 import json
 
 from multiprocessing import Process, freeze_support
-from implentationCode.variable import FOLDER_RESUME, PATH_JSON_SCHEMA, FOLDER_JSON
+from implentationCode.variable import FOLDER_RESUME, PATH_JSON_SCHEMA, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON
 from implentationCode.resumeToJson import resumeToJson
 from implentationCode.jsonToDoc import create_template
 
-
+def init_folder(folders):
+    for folder in folders:
+        try:
+            os.makedirs(folder)
+        except:
+            print(folder + " existe déjà.")
 
 def main():
     print("###########################################################################")
@@ -14,6 +19,8 @@ def main():
     print("###########################################################################")
     print("\n\nVérifier que les variables correspondent à votre environnement")
     print("Pour que le programme se lance, il faut obligatoirement 1 CV au format pdf dans le dossier : " + FOLDER_RESUME)
+    
+    init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON])     
     
     pdf_files = [file for file in os.listdir(FOLDER_RESUME) if file.lower().endswith('.pdf')]
     
