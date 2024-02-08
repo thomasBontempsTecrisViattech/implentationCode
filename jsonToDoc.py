@@ -137,5 +137,5 @@ def create_template(json_file):
 
 
     # Save the document
-    doc.save(FOLDER_DOCX + '/' + json_file)
-    print(f"Template créé et enregistré sous '{FOLDER_DOCX + '/' + json_file}'")
+    doc.save(FOLDER_DOCX + '/' + json_file[:-4] + 'docx')
+    print(f"Template créé et enregistré sous : '{FOLDER_DOCX + '/' + json_file[:-4] + 'docx'}'")

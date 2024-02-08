@@ -1,0 +1,278 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": {                
+		"personal_information": {
+			"type": "object",
+			"description": "All personnal information about the person",
+			"properties": {
+				"firstname": {
+					"type": "string",
+					"title": "First name",
+					"description": "The person's first name"
+				},
+				"lastname": {
+					"type": "string",
+					"title": "Last name",
+					"description": "The person's last name"
+				},
+				"age": {
+					"type": "string",
+					"description": "Age in years of the person which must be equal to or greather than zero"
+				},
+				"address": {
+					"type": "string",
+					"description": "Adresse of the person in real life which must be precise by the country"
+				},
+				"role": {
+					"type": "string",
+					"description": "Role desired by the person"
+				},
+				"person_hobbies": {
+					"type": "array",
+					"description": "All hobbies referred by the person",
+					"items":{
+						"type": "string"
+					}
+				},
+				"dialecte_know": {
+					"type": "array",
+					"description": "Dialectes know by the person",
+					"items":{
+						"type": "object",
+						"description": "dialecte and level about the person",
+						"properties": {
+							"dialecte":{
+								"type":"string",
+								"description":"dialecte knows"
+							},
+							"level":{
+								"type":"string",
+								"description":"level of the person in this dialecte"
+							}
+						}
+					}
+				},
+				"email": {
+					"type": "string",
+					"format": "email",
+					"description": "Personal email of the person"
+				},
+				"phone": {
+					"type": "string",
+					"pattern": "^\\+\\d{1,3} \\d{1,14}$",
+					"description": "Personal phone number of the person"
+				},
+				"isStudent": {
+					"type": "boolean",
+					"description": "Precision if the person is an actual student"
+				},
+				"areas_expertise": {
+					"type": "array",
+					"description": "All area of expertise exercised by the person",
+					"items":{
+						"type": "object",
+						"description": "Description about the area of expertise",
+						"properties": {
+							"area_expertise": {
+								"type": "string",
+								"description": "Name of the area of expertise"
+							},
+							"tools": {
+								"type": "array",
+								"description": "Name of the area of expertise",
+								"items":{
+									"type": "string",
+									"description": "Tools like FMEA, Fault tree, reliability calculation..."
+								}
+							},
+							"years":{
+								"type": "string",
+								"description": "Number of years excercise the area of expertise"
+							}
+						}
+					}
+				}
+			}
+		},
+	
+		"softskills": {
+			"type": "array",
+			"description": "Softskills listed by the person",
+			"items": {
+				"type": "string"
+			}
+		},
+		"hardskills": {
+			"type": "array",
+			"description": "Hardskills listed by the person",
+			"items": {
+				"type": "string"
+			}
+		},
+		"formations": {
+			"type": "array",
+			"description": "Formations realized by the person",
+			"items": {
+				"type": "object",
+				"description": "Year and goal about the formation",
+				"properties": {
+					"formation_name":{
+						"type": "string",
+						"description": "name of the formation"
+					},
+					"formation_year":{
+						"type": "string",
+						"description": "Year of the formation"
+					}
+				}
+			}
+		},
+		"standards": {
+			"type": "array",
+			"description": "Standards learn by the person",
+			"items": {
+				"type": "string"
+			}
+		},
+		"softwares": {
+			"type": "array",
+			"description": "Softwares use by the person",
+			"items": {
+				"type": "string"
+			}
+		},
+		"computer_language": {
+			"type": "array",
+			"description": "Computer languages learn by the person",
+			"items": {
+				"type": "string"
+			}
+		},
+		
+		"education_school": {
+			"type": "array",
+			"description": "List of informations about school",
+			"items": {
+				"type": "object",
+				"description": "Description about the school",
+				"properties": {
+					"school_name": {
+						"type": "string",
+						"description": "Name of the school"
+					},
+					"degree":{
+						"type": "string",
+						"description": "Degree maximum awarded of the school"
+					},
+					"graduation_year":{
+						"type": "string",
+						"description": "Graduation year where the person obtain the degree"
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the school"
+					}
+				}
+			}
+		},           
+		
+		"realised_jobs":{
+			"type": "array",
+			"description": "List of informations about job",
+			"items": {
+				"type": "object",
+				"description": "Description about the job",
+				"properties": {
+					"company_name": {
+						"type": "string",
+						"description": "Name of the company"
+					},
+					"person_role":{
+						"type": "string",
+						"description": "Role in the company"
+					},
+					"start_date": {
+						"type": "string",
+						"description": "Start date in the company with year and month"
+					},
+					"end_date": {
+						"type": "string",
+						"description": "End date in the company with year and month, other if currently in the company not precise the end of date"
+					},
+					"skills":{
+						"type": "array",
+						"description": "All skills use during the time in the company",
+						"items":{
+							"type": "string"
+						}
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the job"
+					}
+				}
+			}
+		},
+		
+		"personal_projects":{
+			"type": "array",
+			"description": "List of informations about personals project",
+			"items": {
+				"type": "object",
+				"description": "Description about the personal project",
+				"properties": {
+					"project_name": {
+						"type": "string",
+						"description": "Name of the personal project"
+					},
+					"person_role":{
+						"type": "string",
+						"description": "Role in the personal project"
+					},
+					"start_date": {
+						"type": "string",
+						"description": "Start date of the personal project with year and month"
+					},
+					"end_date": {
+						"type": "string",
+						"description": "End date of the personal project with year and month, other if currently in the personal project not precise the end of date"
+					},
+					"skills":{
+						"type": "array",
+						"description": "All skills use during the time of the personal project",
+						"items":{
+							"type": "string"
+						}
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the personal project"
+					}
+				}
+			}
+		},
+	
+		"volunteering": {
+			"type": "array",
+			"description": "List of informations about volunteering",
+			"items": {
+				"type": "object",
+				"properties": {
+					"associationName": {
+						"type": "string",
+						"description": "Name of the association"
+					},
+					"personRole":{
+						"type": "string",
+						"description": "Role in the association"
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the volunteering"
+					}
+				}
+			}
+		}
+	}   
+}
