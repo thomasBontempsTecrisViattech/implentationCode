@@ -16,8 +16,12 @@ Le code ci-dessous permet de créer un environnement python sous conda et d'inst
 J'utilise python 3.9.18 pour utiliser les LLMs
 
 ``
-conda create --name "ProjectName" python=3.9.18  
+conda create --name "ProjectName" python=3.9.18 
+``
+`` 
 conda activate "ProjectName"  
+``
+``
 conda install pip  
 ``
 
