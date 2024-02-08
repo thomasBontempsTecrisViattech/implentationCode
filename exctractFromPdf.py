@@ -1,5 +1,6 @@
-from pdf2image import convert_from_path
 import pytesseract
+
+from pdf2image import convert_from_path
 from PIL import Image
 from implentationCode.variable import TESSERACT_CMD, FOLDER_IMAGE
 

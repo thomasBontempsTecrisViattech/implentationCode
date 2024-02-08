@@ -1,9 +1,8 @@
-import os 
 import time
 import json
+
 from implentationCode.exctractFromPdf import extract_content_from_pdf
 from implentationCode.generateJsonFromResume import extract_structured_data
-from tempfile import NamedTemporaryFile
 from implentationCode.variable import FOLDER_RESUME, FOLDER_JSON
 
 

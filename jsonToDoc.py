@@ -1,9 +1,10 @@
+import json 
+
 from docx import Document
 from docx.shared import Pt
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.shared import Inches
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_ALIGN_VERTICAL
-import json 
 from implentationCode.variable import LOGO_VIATTECH, FOLDER_JSON, FOLDER_DOCX
 
 

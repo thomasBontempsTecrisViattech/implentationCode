@@ -42,6 +42,6 @@ Pour lancer le programme, veuillez réaliser cette commande :
 cd Your/Folder/Where/Main
 ``  
 ``
-py main.py
+python main.py
 ``
 
