@@ -2,9 +2,9 @@ import os
 import json
 
 from multiprocessing import Process, freeze_support
-from implentationCode.variable import FOLDER_RESUME, PATH_JSON_SCHEMA, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON
-from implentationCode.resumeToJson import resumeToJson
-from implentationCode.jsonToDoc import create_template
+from variable import FOLDER_RESUME, PATH_JSON_SCHEMA, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON
+from resumeToJson import resumeToJson
+from jsonToDoc import create_template
 
 def init_folder(folders):
     for folder in folders:

@@ -1,4 +1,4 @@
-from implentationCode.HuggingFaceLLM import HuggingFaceLLM
+from HuggingFaceLLM import HuggingFaceLLM
 
 def extract_structured_data(content: str, json_schema):
     llm = HuggingFaceLLM(temperature=0)  # Choose the desired Hugging Face model

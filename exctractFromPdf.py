@@ -2,7 +2,7 @@ import pytesseract
 
 from pdf2image import convert_from_path
 from PIL import Image
-from implentationCode.variable import TESSERACT_CMD, FOLDER_IMAGE
+from variable import TESSERACT_CMD, FOLDER_IMAGE
 
 # Get tesseract executeur
 pytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
