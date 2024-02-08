@@ -18,10 +18,12 @@ def main():
     print("#################### Conversion de CV en DOCX #############################")
     print("###########################################################################")
     print("\n\nVérifier que les variables correspondent à votre environnement")
-    print("Pour que le programme se lance, il faut obligatoirement 1 CV au format pdf dans le dossier : " + FOLDER_RESUME)
     
+    print("\n\nCréation des dossiers :")
     init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON])     
     
+    
+    print("\n\nPour que le programme se lance, il faut obligatoirement 1 CV au format pdf dans le dossier : " + FOLDER_RESUME)
     pdf_files = [file for file in os.listdir(FOLDER_RESUME) if file.lower().endswith('.pdf')]
     
     if pdf_files:
@@ -35,6 +37,8 @@ def main():
             print("\n\n#################### Conversion de JSON en DOCX #############################\n")
             
             create_template(pdf_file[:-3] +'json')
+    else:
+        print("Pas de pdf dans le dossier : ", FOLDER_RESUME, "\npdf_files = ", pdf_files)
     
     
 
