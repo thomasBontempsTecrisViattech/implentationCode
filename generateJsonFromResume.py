@@ -1,7 +1,7 @@
 from HuggingFaceLLM import HuggingFaceLLM
 
 def extract_structured_data(content: str, json_schema):
-    llm = HuggingFaceLLM(temperature=0)  # Choose the desired Hugging Face model
+    llm = HuggingFaceLLM()  # Choose the desired Hugging Face model
     
     template = """
     The resume is below and delimited by --START-- and --END--. You will use this resume to extract the information. 
