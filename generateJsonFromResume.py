@@ -20,6 +20,6 @@ def extract_structured_data(content: str, json_schema):
     
     # Generate text using the formatted template
     results = llm.generate(prompt=formatted_template,
-                           json_schema=json_schema)
+                           json_schema=json_schema,)
 
     return results

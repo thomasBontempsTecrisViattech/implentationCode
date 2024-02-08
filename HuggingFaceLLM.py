@@ -8,7 +8,7 @@ class HuggingFaceLLM:
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         
 
-    def generate(self, prompt, json_schema, temperature=0.0):
+    def generate(self, prompt, json_schema, temperature=0.0001):# strictly positive
 
         builder = Jsonformer(
             model=self.model,
