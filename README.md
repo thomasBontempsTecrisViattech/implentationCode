@@ -15,15 +15,15 @@ Pour l'installation sur Windows, je vous invite à suivre ce [repository github]
 Le code ci-dessous permet de créer un environnement python sous conda et d'installer les librairies.  
 J'utilise python 3.9.18 pour utiliser les LLMs
 
-``py
-conda create --name "ProjectName" python=3.9.18
-conda activate "ProjectName"
-conda install pip
+``
+conda create --name "ProjectName" python=3.9.18  
+conda activate "ProjectName"  
+conda install pip  
 ``
 
 Pip permet d'installer le reste des modules. 
 
-``py 
+`` 
 pip install requirements.txt
 ``
 
