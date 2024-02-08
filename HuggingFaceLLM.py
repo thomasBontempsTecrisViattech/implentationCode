@@ -1,5 +1,5 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from jsonformer.main import Jsonformer
+from jsonFormer.jsonformer.main import Jsonformer
 
 class HuggingFaceLLM:
     # Model_name : databricks/dolly-v2-3b, 
