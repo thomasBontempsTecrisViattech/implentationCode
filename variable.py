@@ -11,7 +11,7 @@ FOLDER_DOCX = PATH + 'implentationCode/Data/DOCX/' # Dossier où les fichiers DO
 FOLDER_IMAGE = PATH + 'implentationCode/Data/imgPdfPages/' # Dossier provisoire où les CV pdf sont stockés sous forme d'image
 
 # Chemin où se situe le schéma du JSON 
-PATH_JSON_SCHEMA = PATH + 'implentation/Data/JSON/JSON_Schema/JsonSchema.json'
+PATH_JSON_SCHEMA = PATH + 'implentationCode/Data/JSON/JSON_schema/JsonSchema.json'
 
 # Element besoin pour le DT
 LOGO_VIATTECH = PATH + 'implentationCode/Data/image/viattech_qs_logo.png' # Logo viattech à utiliser lors de la création du dossier technique

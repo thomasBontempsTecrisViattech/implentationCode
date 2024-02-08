@@ -31,8 +31,11 @@ def main():
             print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
-            json_schema = json.load(PATH_JSON_SCHEMA)
-            resumeToJson(json_schema=json_schema, file_input=pdf_file)    
+            json_file = open(PATH_JSON_SCHEMA) 
+            json_schema = json.load(json_file)
+            json_file.close()
+            
+            resumeToJson(json_schema=json_schema, file_input=os.path.join(pdf_file))    
             
             print("\n\n#################### Conversion de JSON en DOCX #############################\n")
             
