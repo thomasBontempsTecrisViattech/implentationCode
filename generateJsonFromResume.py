@@ -17,11 +17,8 @@ def extract_structured_data(content: str, json_schema):
     
     # Fill in the placeholders in the template
     formatted_template = template.format(content=content)#, data_points=data_points)
-    print("\n\nformatted_template : " + formatted_template + "\n\n")
     
     # Generate text using the formatted template
-    
-    
     results = llm.generate(prompt=formatted_template,
                            json_schema=json_schema)
 
