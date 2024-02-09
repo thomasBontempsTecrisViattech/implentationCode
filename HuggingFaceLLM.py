@@ -3,7 +3,7 @@ from jsonFormer.jsonformer.main import Jsonformer
 
 class HuggingFaceLLM:
     # Model_name : databricks/dolly-v2-3b, 
-    def __init__(self, model_name="databricks/dolly-v2-3b"):
+    def __init__(self, model_name="databricks/dolly-v2-7b"):
         self.model = AutoModelForCausalLM.from_pretrained(model_name)
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         
