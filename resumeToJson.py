@@ -8,7 +8,6 @@ from variable import FOLDER_RESUME, FOLDER_JSON
 
 
 def resumeToJson(json_filename, json_schema, file_input):
-    
     start_time = time.time()  # Record the start time
     content = extract_content_from_pdf(FOLDER_RESUME + '/' + file_input)
     data = extract_structured_data(content, json_schema)

@@ -1,5 +1,5 @@
 {
-	"description": "Informations of a resume",
+	"description": "Informations about a list of jobs that the person has been do.",
 	"type": "object",
 	"properties": { 	
 		"realised_jobs":{
@@ -16,6 +16,10 @@
 					"person_role":{
 						"type": "string",
 						"description": "Role in the company"
+					},
+					"title":{
+						"type": "string",
+						"description": "Goal of the mission job"
 					},
 					"start_date": {
 						"type": "string",

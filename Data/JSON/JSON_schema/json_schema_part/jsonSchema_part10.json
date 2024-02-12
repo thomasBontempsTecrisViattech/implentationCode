@@ -1,5 +1,5 @@
 {
-	"description": "Informations of a resume",
+	"description": "List of education schools and degree.",
 	"type": "object",
 	"properties": { 
 		"education_school": {
@@ -9,10 +9,6 @@
 				"type": "object",
 				"description": "Description about the school",
 				"properties": {
-					"isStudent":{
-						"type":"boolean",
-						"description": "If the person is currently in school"
-					},
 					"school_name": {
 						"type": "string",
 						"description": "Name of the school"
@@ -21,9 +17,13 @@
 						"type": "string",
 						"description": "Degree maximum awarded of the school"
 					},
-					"graduation_year":{
+					"start_year":{
 						"type": "string",
-						"description": "Graduation year where the person obtain the degree"
+						"description": "First year in the school"
+					},
+					"end_year":{
+						"type": "string",
+						"description": "Last year in the school"
 					},
 					"specification":{
 						"type": "string",

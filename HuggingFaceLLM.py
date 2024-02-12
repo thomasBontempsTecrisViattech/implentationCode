@@ -10,7 +10,7 @@ os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
 
 class HuggingFaceLLM:
     # Model_name : databricks/dolly-v2-3b, 
-    def __init__(self, model_name="databricks/dolly-v2-7b"):
+    def __init__(self, model_name="databricks/dolly-v2-3b"):
         self.model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
         
@@ -24,6 +24,9 @@ class HuggingFaceLLM:
             json_schema=json_schema,
             prompt= prompt,
             temperature=temperature,
+            max_array_length=100,
+            max_string_token_length=100,
+            max_number_tokens=100,
             device=device
         )
 

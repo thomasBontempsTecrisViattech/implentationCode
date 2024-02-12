@@ -1,5 +1,5 @@
 {
-	"description": "Informations of a resume",
+	"description": "List of softskills obtained by the person",
 	"type": "object",
 	"properties": { 		
 		"softskills": {

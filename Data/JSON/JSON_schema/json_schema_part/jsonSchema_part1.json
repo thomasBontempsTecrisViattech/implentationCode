@@ -1,5 +1,5 @@
 {
-	"description": "Informations of a resume",
+	"description": "Informations personal about the person in the resume",
 	"type": "object",
 	"properties": {                
 		"personal_information": {

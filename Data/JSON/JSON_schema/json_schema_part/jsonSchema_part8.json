@@ -1,5 +1,5 @@
 {
-	"description": "Informations of a resume",
+	"description": "List of softwares that the person has been using",
 	"type": "object",
 	"properties": { 
 		"softwares": {

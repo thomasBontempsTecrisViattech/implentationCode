@@ -1,5 +1,5 @@
 {
-	"description": "Informations of a resume",
+	"description": "List of common languages uses by the person in the resume",
 	"type": "object",
 	"properties": {                
 		"dialectes": {

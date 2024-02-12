@@ -3,6 +3,7 @@ import pytesseract
 from pdf2image import convert_from_path
 from PIL import Image
 from variable import TESSERACT_CMD, FOLDER_IMAGE
+from unidecode import unidecode
 
 # Get tesseract executeur
 pytesseract.pytesseract.tesseract_cmd = TESSERACT_CMD
@@ -27,5 +28,5 @@ def extract_text_from_img(nb_img):
 # 3. Extract text from pdf
 def extract_content_from_pdf(file_path: str):
     nb_img = convert_pdf_to_images(file_path)
-    return extract_text_from_img(nb_img)
+    return unidecode(extract_text_from_img(nb_img))
     

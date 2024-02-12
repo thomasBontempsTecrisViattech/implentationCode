@@ -25,13 +25,13 @@ def main():
     
     print("\n\nPour que le programme se lance, il faut obligatoirement 1 CV au format pdf dans le dossier : " + FOLDER_RESUME)
     pdf_files = [file for file in os.listdir(FOLDER_RESUME) if file.lower().endswith('.pdf')]
+    json_schema_part_files = [json_schema_file for json_schema_file in os.listdir(FOLDER_JSON_SCHEMA) if json_schema_file.lower().endswith('.json')]
     
     if pdf_files:
         for pdf_file in pdf_files:
             print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
-            json_schema_part_files = [json_schema_file for json_schema_file in os.listdir(FOLDER_JSON_SCHEMA) if json_schema_file.lower().endswith('.json')]
             for json_schema_part_file in json_schema_part_files:
                 with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
                     json_schema = json.load(json_file)

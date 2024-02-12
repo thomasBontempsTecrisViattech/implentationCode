@@ -1,5 +1,5 @@
 {
-	"description": "Informations of a resume",
+	"description": "List of standards learned by the person",
 	"type": "object",
 	"properties": { 	
 		"standards": {

@@ -1,10 +1,10 @@
 {
-	"description": "Informations of a resume",
+	"description": "List of person's lobbies",
 	"type": "object",
 	"properties": { 		
-		"hardskills": {
+		"lobbies": {
 			"type": "array",
-			"description": "Hardskills listed by the person",
+			"description": "lobbies listed by the person",
 			"items": {
 				"type": "string"
 			}
