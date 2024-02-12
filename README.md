@@ -4,7 +4,7 @@ Le but de ce programme est de transformer les CV pdf pour les transformer en un 
 Le fichier JSON structuré permet ensuite de créer un documents DOCX comme bon vouloir. 
 
 # Propriété :
-Ce code a été réalisé par Thomas Bontemps dans le but d'une mission pour Tecris Consulting.  Celui-ci utilise le travail collaboratif de [1rgs](https://github.com/1rgs/jsonformer).  Merci de préciser les auteurs si vous réutiliser ce code ou des parties de celui-ci.
+Ce code a été réalisé par Thomas Bontemps dans le but d'une mission pour Tecris Consulting.  Celui-ci utilise le travail de [1rgs](https://github.com/1rgs) de la class [JsonFormer](https://github.com/1rgs/jsonformer).  Merci de préciser les auteurs si vous réutiliser ce code ou des parties de celui-ci.
 
 ## Information
 
