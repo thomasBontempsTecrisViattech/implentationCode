@@ -1,0 +1,13 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": { 		
+		"hardskills": {
+			"type": "array",
+			"description": "Hardskills listed by the person",
+			"items": {
+				"type": "string"
+			}
+		}
+    }
+}

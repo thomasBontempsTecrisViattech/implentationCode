@@ -1,0 +1,36 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": { 
+		"education_school": {
+			"type": "array",
+			"description": "List of informations about school",
+			"items": {
+				"type": "object",
+				"description": "Description about the school",
+				"properties": {
+					"isStudent":{
+						"type":"boolean",
+						"description": "If the person is currently in school"
+					},
+					"school_name": {
+						"type": "string",
+						"description": "Name of the school"
+					},
+					"degree":{
+						"type": "string",
+						"description": "Degree maximum awarded of the school"
+					},
+					"graduation_year":{
+						"type": "string",
+						"description": "Graduation year where the person obtain the degree"
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the school"
+					}
+				}
+			}
+		}
+    }
+}

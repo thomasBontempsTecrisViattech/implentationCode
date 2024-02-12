@@ -64,9 +64,9 @@ class NumberStoppingCriteria(StoppingCriteria):
 
 
 class OutputNumbersTokens(LogitsWarper):
-    def __init__(self, tokenizer: PreTrainedTokenizer, prompt: str):
+    def __init__(self, tokenizer: PreTrainedTokenizer, prompt: str, device: str):
         self.tokenizer = tokenizer
-        self.tokenized_prompt = tokenizer(prompt, return_tensors="pt")
+        self.tokenized_prompt = tokenizer(prompt, return_tensors="pt").to(device)
         vocab_size = len(tokenizer)
         self.allowed_mask = torch.zeros(vocab_size, dtype=torch.bool)
 
@@ -87,9 +87,9 @@ class OutputNumbersTokens(LogitsWarper):
 
 
 class OutputCommaAndBracketTokens(LogitsWarper):
-    def __init__(self, tokenizer: PreTrainedTokenizer, prompt: str):
+    def __init__(self, tokenizer: PreTrainedTokenizer, prompt: str, device: str):
         self.tokenizer = tokenizer
-        self.tokenized_prompt = tokenizer(prompt, return_tensors="pt")
+        self.tokenized_prompt = tokenizer(prompt, return_tensors="pt").to(device)
         vocab_size = len(tokenizer)
         self.allowed_mask = torch.zeros(vocab_size, dtype=torch.bool)
 

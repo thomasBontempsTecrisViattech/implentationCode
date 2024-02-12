@@ -28,6 +28,13 @@
 					"type": "string",
 					"description": "Role desired by the person"
 				},
+				"person_hobbies": {
+					"type": "array",
+					"description": "All hobbies referred by the person",
+					"items":{
+						"type": "string"
+					}
+				},
 				"dialecte_know": {
 					"type": "array",
 					"description": "Dialectes know by the person",
@@ -45,6 +52,16 @@
 							}
 						}
 					}
+				},
+				"email": {
+					"type": "string",
+					"format": "email",
+					"description": "Personal email of the person"
+				},
+				"phone": {
+					"type": "string",
+					"pattern": "^\\+\\d{1,3} \\d{1,14}$",
+					"description": "Personal phone number of the person"
 				},
 				"isStudent": {
 					"type": "boolean",
@@ -196,7 +213,66 @@
 					}
 				}
 			}
-		}
+		},
 		
+		"personal_projects":{
+			"type": "array",
+			"description": "List of informations about personals project",
+			"items": {
+				"type": "object",
+				"description": "Description about the personal project",
+				"properties": {
+					"project_name": {
+						"type": "string",
+						"description": "Name of the personal project"
+					},
+					"person_role":{
+						"type": "string",
+						"description": "Role in the personal project"
+					},
+					"start_date": {
+						"type": "string",
+						"description": "Start date of the personal project with year and month"
+					},
+					"end_date": {
+						"type": "string",
+						"description": "End date of the personal project with year and month, other if currently in the personal project not precise the end of date"
+					},
+					"skills":{
+						"type": "array",
+						"description": "All skills use during the time of the personal project",
+						"items":{
+							"type": "string"
+						}
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the personal project"
+					}
+				}
+			}
+		},
+	
+		"volunteering": {
+			"type": "array",
+			"description": "List of informations about volunteering",
+			"items": {
+				"type": "object",
+				"properties": {
+					"associationName": {
+						"type": "string",
+						"description": "Name of the association"
+					},
+					"personRole":{
+						"type": "string",
+						"description": "Role in the association"
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the volunteering"
+					}
+				}
+			}
+		}
 	}   
 }

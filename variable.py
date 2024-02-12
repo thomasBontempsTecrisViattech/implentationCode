@@ -12,6 +12,8 @@ FOLDER_IMAGE = PATH + 'implentationCode/Data/imgPdfPages/' # Dossier provisoire 
 
 # Chemin où se situe le schéma du JSON 
 PATH_JSON_SCHEMA = PATH + 'implentationCode/Data/JSON/JSON_schema/JsonSchema.json'
+# Dossier où se situe le schéma JSON décomposé. 
+FOLDER_JSON_SCHEMA = PATH + 'implentationCode/Data/JSON/JSON_schema/json_schema_part/'
 
 # Element besoin pour le DT
 LOGO_VIATTECH = PATH + 'implentationCode/Data/image/viattech_qs_logo.png' # Logo viattech à utiliser lors de la création du dossier technique

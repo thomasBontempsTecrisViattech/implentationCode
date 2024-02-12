@@ -1,0 +1,24 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": {                
+		"dialectes": {
+			"type": "array",
+			"description": "Dialectes know by the person",
+			"items":{
+				"type": "object",
+				"description": "dialecte and level about the person",
+				"properties": {
+					"dialecte":{
+						"type":"string",
+						"description":"dialecte knows"
+					},
+					"level":{
+						"type":"string",
+						"description":"level of the person in this dialecte"
+					}
+				}
+			}
+		}
+    }
+}

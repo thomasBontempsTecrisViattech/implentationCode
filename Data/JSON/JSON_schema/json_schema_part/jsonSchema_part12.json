@@ -1,0 +1,13 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": { 	
+		"standards": {
+			"type": "array",
+			"description": "Standards learn by the person",
+			"items": {
+				"type": "string"
+			}
+		}
+    }
+}

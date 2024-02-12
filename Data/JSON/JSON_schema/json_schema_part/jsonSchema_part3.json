@@ -1,0 +1,32 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": { 
+		"areas_expertise": {
+			"type": "array",
+			"description": "All area of expertise exercised by the person",
+			"items":{
+				"type": "object",
+				"description": "Description about the area of expertise",
+				"properties": {
+					"area_expertise": {
+						"type": "string",
+						"description": "Name of the area of expertise"
+					},
+					"tools": {
+						"type": "array",
+						"description": "Name of the area of expertise",
+						"items":{
+							"type": "string",
+							"description": "Tools like FMEA, Fault tree, reliability calculation..."
+						}
+					},
+					"years":{
+						"type": "string",
+						"description": "Number of years excercise the area of expertise"
+					}
+				}
+			}
+		}
+    }
+}

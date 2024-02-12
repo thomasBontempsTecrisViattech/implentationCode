@@ -2,7 +2,7 @@ import os
 import json
 
 from multiprocessing import Process, freeze_support
-from variable import FOLDER_RESUME, PATH_JSON_SCHEMA, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON
+from variable import FOLDER_RESUME, PATH_JSON_SCHEMA, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA
 from resumeToJson import resumeToJson
 from jsonToDoc import create_template
 
@@ -20,7 +20,7 @@ def main():
     print("\n\nVérifier que les variables correspondent à votre environnement")
     
     print("\n\nCréation des dossiers :")
-    init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON])     
+    init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA])     
     
     
     print("\n\nPour que le programme se lance, il faut obligatoirement 1 CV au format pdf dans le dossier : " + FOLDER_RESUME)
@@ -31,20 +31,23 @@ def main():
             print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
-            with open(PATH_JSON_SCHEMA) as json_file:
-                json_schema = json.load(json_file)
+            json_schema_part_files = [json_schema_file for json_schema_file in os.listdir(FOLDER_JSON_SCHEMA) if json_schema_file.lower().endswith('.json')]
+            for json_schema_part_file in json_schema_part_files:
+                with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
+                    json_schema = json.load(json_file)
             
-            resumeToJson(json_schema=json_schema, file_input=pdf_file)    
+                print("\nTraitement du schema : ", json_schema_part_file,"\n")
+                resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file)    
             
-            print("\n\n#################### Conversion de JSON en DOCX #############################\n")
+            #print("\n\n#################### Conversion de JSON en DOCX #############################\n")
             
-            create_template(pdf_file[:-3] +'json')
+            #create_template(pdf_file[:-3] +'json')
     else:
-        print("Pas de pdf dans le dossier : ", FOLDER_RESUME, "\npdf_files = ", pdf_files)
+        print("Pas de CV au format pdf dans le dossier : ", FOLDER_RESUME, "\npdf_files = ", pdf_files)
         
     
     
-    print("###########################################################################")
+    print("\n\n###########################################################################")
     print("############################### FIN #######################################")
     print("###########################################################################")
     

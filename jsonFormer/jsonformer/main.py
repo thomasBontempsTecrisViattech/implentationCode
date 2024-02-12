@@ -28,16 +28,18 @@ class Jsonformer:
         max_number_tokens: int = 6,
         temperature: float = 1.0,
         max_string_token_length: int = 10,
+        device: str = 'cpu',
     ):
-        self.model = model
+        self.model = model.to(device)
         self.tokenizer = tokenizer
         self.json_schema = json_schema
         self.prompt = prompt
+        self.device = device
 
-        self.number_logit_processor = OutputNumbersTokens(self.tokenizer, self.prompt)
+        self.number_logit_processor = OutputNumbersTokens(
+            self.tokenizer, self.prompt, self.device)
         self.array_end_logit_processor = OutputCommaAndBracketTokens(
-            self.tokenizer, self.prompt
-        )
+            self.tokenizer, self.prompt, self.device)
 
         self.generation_marker = "|GENERATION|"
         self.debug_on = debug
@@ -60,7 +62,7 @@ class Jsonformer:
         prompt = self.get_prompt()
         self.debug("[generate_number]", prompt, is_prompt=True)
         input_tokens = self.tokenizer.encode(prompt, return_tensors="pt").to(
-            self.model.device
+            self.device
         )
         response = self.model.generate(
             input_tokens,
@@ -93,7 +95,7 @@ class Jsonformer:
         self.debug("[generate_boolean]", prompt, is_prompt=True)
 
         input_tensor = self.tokenizer.encode(prompt, return_tensors="pt")
-        output = self.model.forward(input_tensor.to(self.model.device))
+        output = self.model.forward(input_tensor.to(self.device))
         logits = output.logits[0, -1]
 
         # todo: this assumes that "true" and "false" are both tokenized to a single token
@@ -112,7 +114,7 @@ class Jsonformer:
         prompt = self.get_prompt() + '"'
         self.debug("[generate_string]", prompt, is_prompt=True)
         input_tokens = self.tokenizer.encode(prompt, return_tensors="pt").to(
-            self.model.device
+            self.device
         )
 
         response = self.model.generate(
@@ -203,7 +205,7 @@ class Jsonformer:
             input_prompt = self.get_prompt()
             obj.pop()
             input_tokens = self.tokenizer.encode(input_prompt, return_tensors="pt").to(
-                self.model.device
+                self.device
             )
             response = self.model.generate(
                 input_tokens,

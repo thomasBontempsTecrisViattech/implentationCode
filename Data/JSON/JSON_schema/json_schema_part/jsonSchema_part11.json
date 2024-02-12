@@ -1,0 +1,43 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": { 	
+		"realised_jobs":{
+			"type": "array",
+			"description": "List of informations about job",
+			"items": {
+				"type": "object",
+				"description": "Description about the job",
+				"properties": {
+					"company_name": {
+						"type": "string",
+						"description": "Name of the company"
+					},
+					"person_role":{
+						"type": "string",
+						"description": "Role in the company"
+					},
+					"start_date": {
+						"type": "string",
+						"description": "Start date in the company with year and month"
+					},
+					"end_date": {
+						"type": "string",
+						"description": "End date in the company with year and month, other if currently in the company not precise the end of date"
+					},
+					"skills":{
+						"type": "array",
+						"description": "All skills use during the time in the company",
+						"items":{
+							"type": "string"
+						}
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the job"
+					}
+				}
+			}
+		}
+    }
+}

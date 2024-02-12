@@ -1,0 +1,34 @@
+{
+	"description": "Informations of a resume",
+	"type": "object",
+	"properties": {                
+		"personal_information": {
+			"type": "object",
+			"description": "All personnal information about the person",
+			"properties": {
+				"firstname": {
+					"type": "string",
+					"title": "First name",
+					"description": "The person's first name"
+				},
+				"lastname": {
+					"type": "string",
+					"title": "Last name",
+					"description": "The person's last name"
+				},
+				"age": {
+					"type": "string",
+					"description": "Age in years of the person which must be equal to or greather than zero"
+				},
+				"address": {
+					"type": "string",
+					"description": "Adresse of the person in real life which must be precise by the country"
+				},
+				"role": {
+					"type": "string",
+					"description": "Role desired by the person"
+				}
+            }
+        }
+    }
+}
