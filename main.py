@@ -32,12 +32,12 @@ def main():
             print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
-            #for json_schema_part_file in json_schema_part_files:
-            #    with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
-            #        json_schema = json.load(json_file)
-            #
-            #    print("\nTraitement du schema : ", json_schema_part_file,"\n")
-            #    resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file)    
+            for json_schema_part_file in json_schema_part_files:
+                with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
+                    json_schema = json.load(json_file)
+            
+                print("\nTraitement du schema : ", json_schema_part_file,"\n")
+                resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file)    
             
             print("\n\n#################### Conversion de JSON en DOCX #############################\n")
             
