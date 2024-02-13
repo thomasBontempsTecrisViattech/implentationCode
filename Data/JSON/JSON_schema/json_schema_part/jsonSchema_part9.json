@@ -1,12 +1,12 @@
 {
-	"description": "List of computer languages that the person has been used",
+	"description": "List of computer languages that the person has been used during their career.",
 	"type": "object",
 	"properties": { 
 		"computer_languages": {
 			"type": "array",
-			"description": "Computer languages learn by the person",
 			"items": {
-				"type": "string"
+				"type": "string",
+				"description": "Computer language learned by the person"
 			}
 		}
     }

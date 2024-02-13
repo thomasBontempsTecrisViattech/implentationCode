@@ -1,12 +1,12 @@
 {
-	"description": "List of softwares that the person has been using",
+	"description": "List of softwares development that the person has been using during their career. It can include computer software, sortware package, software system or some application.",
 	"type": "object",
 	"properties": { 
 		"softwares": {
 			"type": "array",
-			"description": "Softwares use by the person",
 			"items": {
-				"type": "string"
+				"type": "string",
+				"description": "Software used by the person"
 			}
 		}
     }

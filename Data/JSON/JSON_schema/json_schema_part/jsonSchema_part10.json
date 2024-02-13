@@ -1,5 +1,5 @@
 {
-	"description": "List of education schools and degree.",
+	"description": "List of object about education schools and degree. For each school, it will be precise the name of the school, the degree, the start and end year. If more indication is about the school, put it in specification.",
 	"type": "object",
 	"properties": { 
 		"education_school": {

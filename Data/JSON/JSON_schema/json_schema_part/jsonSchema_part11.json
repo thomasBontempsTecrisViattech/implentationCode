@@ -1,5 +1,5 @@
 {
-	"description": "Informations about a list of jobs that the person has been do.",
+	"description": "List of object about a jobs that the person has been do. For each job, it will be precise by the company name, the role in the company, the title of the mission, the start and end date. If some skills are stated, list them. A skill can be anything related at the person. If more indication is about the job, put it in specification.",
 	"type": "object",
 	"properties": { 	
 		"realised_jobs":{

@@ -1,5 +1,5 @@
 {
-	"description": "List of common languages uses by the person in the resume",
+	"description": "List of object about common languages used by the person in the resume. It will precise the level for each dialecte",
 	"type": "object",
 	"properties": {                
 		"dialectes": {
@@ -11,7 +11,7 @@
 				"properties": {
 					"dialecte":{
 						"type":"string",
-						"description":"dialecte knows"
+						"description":"dialecte learned by the person"
 					},
 					"level":{
 						"type":"string",

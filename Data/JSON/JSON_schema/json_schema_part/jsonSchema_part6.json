@@ -1,12 +1,12 @@
 {
-	"description": "List of person's lobbies",
+	"description": "List of person's pastime. An activity others than the work which the person enjoyed to do.",
 	"type": "object",
 	"properties": { 		
-		"lobbies": {
+		"hobbies": {
 			"type": "array",
-			"description": "lobbies listed by the person",
 			"items": {
-				"type": "string"
+				"type": "string",
+				"description": "Hobbie listed by the person"
 			}
 		}
     }

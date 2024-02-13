@@ -1,12 +1,12 @@
 {
-	"description": "List of standards learned by the person",
+	"description": "List of standards learned by the person. A standard is a norm that the person learn during their career",
 	"type": "object",
 	"properties": { 	
 		"standards": {
 			"type": "array",
-			"description": "Standards learn by the person",
 			"items": {
-				"type": "string"
+				"type": "string",
+				"description": "Standard learned by the person"
 			}
 		}
     }

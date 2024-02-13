@@ -1,12 +1,12 @@
 {
-	"description": "List of hardskills obtained by the person",
+	"description": "List of hardskills obtained by the person. A hardskill is a technical skill, not one that is interpersonal",
 	"type": "object",
 	"properties": { 		
 		"hardskills": {
 			"type": "array",
-			"description": "Hardskills listed by the person",
 			"items": {
-				"type": "string"
+				"type": "string",
+				"description": "Hardskill listed by the person"
 			}
 		}
     }

@@ -1,12 +1,12 @@
 {
-	"description": "List of softskills obtained by the person",
+	"description": "List of softskills obtained by the person. A softskill is a character traits or a common sense, something as social skills",
 	"type": "object",
 	"properties": { 		
 		"softskills": {
 			"type": "array",
-			"description": "Softskills listed by the person",
 			"items": {
-				"type": "string"
+				"type": "string",
+				"description": "Softskill listed by the person"
 			}
 		}
     }
