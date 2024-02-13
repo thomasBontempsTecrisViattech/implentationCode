@@ -10,8 +10,6 @@ FOLDER_JSON = PATH + 'implentationCode/Data/JSON/resumesJSON/' # Dossier où sto
 FOLDER_DOCX = PATH + 'implentationCode/Data/DOCX/' # Dossier où les fichiers DOCX seront stockés
 FOLDER_IMAGE = PATH + 'implentationCode/Data/imgPdfPages/' # Dossier provisoire où les CV pdf sont stockés sous forme d'image
 
-# Chemin où se situe le schéma du JSON 
-PATH_JSON_SCHEMA = PATH + 'implentationCode/Data/JSON/JSON_schema/JsonSchema.json'
 # Dossier où se situe le schéma JSON décomposé. 
 FOLDER_JSON_SCHEMA = PATH + 'implentationCode/Data/JSON/JSON_schema/json_schema_part/'
 

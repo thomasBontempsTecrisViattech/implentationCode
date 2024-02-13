@@ -2,7 +2,7 @@
 	"description": "List of object about a jobs that the person has been do. For each job, it will be precise by the company name, the role in the company, the title of the mission, the start and end date. If some skills are stated, list them. A skill can be anything related at the person. If more indication is about the job, put it in specification. It will be compose by all jobs in the resume.",
 	"type": "object",
 	"properties": { 	
-		"realised_jobs":{
+		"jobs":{
 			"type": "array",
 			"description": "List of informations about job",
 			"items": {

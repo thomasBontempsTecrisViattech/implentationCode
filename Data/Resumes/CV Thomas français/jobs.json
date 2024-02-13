@@ -1,0 +1,2 @@
+{"jobs": [
+    {"company_name": "Tecris", "person_role": "Data Scientist", "title": "Mise en place d'un ChatBot style GPT en interne.", "start_date": "2023-01-01", "end_date": "2023-03-01", "skills": ["Python", "Tensorflow"], "specification": "creation d'une database afin de fine-tuner un modele open-source disponible sur Hugging Face."}]}

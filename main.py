@@ -2,7 +2,7 @@ import os
 import json
 
 from multiprocessing import Process, freeze_support
-from variable import FOLDER_RESUME, PATH_JSON_SCHEMA, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA
+from variable import FOLDER_RESUME, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA
 from resumeToJson import resumeToJson
 from jsonToDoc import create_template
 
@@ -32,16 +32,16 @@ def main():
             print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
-            for json_schema_part_file in json_schema_part_files:
-                with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
-                    json_schema = json.load(json_file)
+            #for json_schema_part_file in json_schema_part_files:
+            #    with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
+            #        json_schema = json.load(json_file)
+            #
+            #    print("\nTraitement du schema : ", json_schema_part_file,"\n")
+            #    resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file)    
             
-                print("\nTraitement du schema : ", json_schema_part_file,"\n")
-                resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file)    
+            print("\n\n#################### Conversion de JSON en DOCX #############################\n")
             
-            #print("\n\n#################### Conversion de JSON en DOCX #############################\n")
-            
-            #create_template(pdf_file[:-3] +'json')
+            create_template(pdf_file[:-4])
     else:
         print("Pas de CV au format pdf dans le dossier : ", FOLDER_RESUME, "\npdf_files = ", pdf_files)
         
