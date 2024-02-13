@@ -5,8 +5,7 @@
 		"computer_languages": {
 			"type": "array",
 			"items": {
-				"type": "string",
-				"description": "Computer language learned by the person"
+				"type": "string"
 			}
 		}
     }

@@ -1,1 +1,5 @@
-{"education_school": [{"school_name": "Institut Superieur de l'electronique et du Numerique (ISEN) - Ecole d'ingenieur - 2017/2022", "degree": "Diplome d'une maitrise en ingenierie", "start_year": "2017", "end_year": "2022", "specification": "Diplome d'une maitrise en ingenierie. J'ai ete delegue de classe pendant 3 ans. Cette ecole ameliore les competences en maths, physiques, informatiques et leadership."}, {"school_name": "Human'isen - 2019-2021", "degree": "President de Human'isen - 2019-2021", "start_year": "2019", "end_year": "2021", "specification": "Association d'etudiants a vocation humanitaire. Durant cette periode, j'ai du recruter de nouveaux membres, organiser des reunions et presider regularement des conference."}]}
+{"education_school": 
+[{"school_name": "Institut Superieur de l'electronique et du Numerique (ISEN) - Ecole d'ingenieur - 2017/2022", 
+"degree": "Diplome d'une maitrise en ingenierie.", "start_year": "2017", "end_year": "2022", "specification": "J'ai ete delegue de classe pendant 3 ans. Cette ecole ameliore les competences en maths, physiques, informatiques et leadership."}, 
+
+{"school_name": "Human'isen - 2019-2021", "degree": "President de Human'isen - 2019-2021", "start_year": "2019", "end_year": "2021", "specification": "Human'ISEN etait une association d'etudiants a vocation humanitaire."}]}

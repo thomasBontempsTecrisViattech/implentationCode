@@ -6,7 +6,7 @@
 			"type": "array",
 			"items": {
 				"type": "string",
-				"description": "Hobbie listed by the person"
+				"description": "Pastime of the person"
 			}
 		}
     }

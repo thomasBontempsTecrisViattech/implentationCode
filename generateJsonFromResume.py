@@ -14,7 +14,7 @@ def extract_structured_data(content: str, json_schema):
     
     --END--
     
-    
+    IMPORTANT THING TO DO BELLOW :
     Goal: 
     Your goal is to provide : {goal}
     
@@ -24,14 +24,11 @@ def extract_structured_data(content: str, json_schema):
     * You will redecompose the resume in distinct part to extract
     * Use paragraph to extract most precise information or context
     * Process multiple choice as answer, create a list of answers
+    * If multiple response, try to find one more
     
     Response format: 
     * No accent at all
     * Consistence phrase
-    
-    
-
-    
     """
     
     # Fill in the placeholders in the template

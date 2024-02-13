@@ -1,0 +1,13 @@
+{
+	"description": "List of standard learned by the person. A standard is practices that are recognized and accepted as the norm within a particular industry, field, or community. Standards aim to ensure consistency, interoperability, quality, and safety in various processes, products, or services.",
+	"type": "object",
+	"properties": { 	
+		"standards": {
+			"type": "array",
+			"items": {
+				"type": "string",
+				"description": "Standard learned by the person"
+			}
+		}
+    }
+}
