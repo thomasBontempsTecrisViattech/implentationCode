@@ -22,5 +22,5 @@ def resumeToJson(json_filename, json_schema, file_input):
         json_file.write(json_data)
     end_time = time.time()  # Record the end time
     elapsed_time = end_time - start_time
-    print("Temps pour un CV :", elapsed_time)                
+    print("Temps pour ", file_input, " : ", elapsed_time)                
         

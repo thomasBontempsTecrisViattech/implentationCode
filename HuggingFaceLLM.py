@@ -16,8 +16,8 @@ class HuggingFaceLLM:
         
 
     def generate(self, prompt, json_schema, temperature=0.0001):# strictly positive
-        #device = "cuda:0" if torch.cuda.is_available() else "cpu"
-        device = 'cpu'
+        device = "cuda:0" if torch.cuda.is_available() else "cpu"
+        #device = 'cpu'
         builder = Jsonformer(
             model=self.model,
             tokenizer=self.tokenizer,
