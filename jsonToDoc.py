@@ -5,7 +5,7 @@ from docx.shared import Pt
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.shared import Inches
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_ALIGN_VERTICAL
-from variable import LOGO_VIATTECH, FOLDER_DOCX, FOLDER_RESUME
+from variable import LOGO_VIATTECH, FOLDER_DOCX, FOLDER_JSON
 
 
 
@@ -13,7 +13,7 @@ def create_template(filename):
     print("################################### JSON To DOCX #####################################")
 
     ########### JSON file ##################
-    folder = FOLDER_RESUME + '/' + filename + '/'
+    folder = FOLDER_JSON + '/' + filename + '/'
     
     
     personal_information = json.load(open(folder + 'personalInformation.json'))['personal_information']

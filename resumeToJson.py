@@ -4,7 +4,7 @@ import os
 
 from exctractFromPdf import extract_content_from_pdf
 from generateJsonFromResume import extract_structured_data
-from variable import FOLDER_RESUME
+from variable import FOLDER_RESUME, FOLDER_JSON
 
 
 
@@ -13,7 +13,7 @@ def resumeToJson(json_filename, json_schema, file_input):
     content = extract_content_from_pdf(FOLDER_RESUME + '/' + file_input)
     data = extract_structured_data(content, json_schema)
     json_data = json.dumps(data)
-    folder_stock_json = FOLDER_RESUME + '/' + file_input[:-4] 
+    folder_stock_json = FOLDER_JSON + '/' + file_input[:-4] 
     try:
         os.makedirs(folder_stock_json)
     except:
