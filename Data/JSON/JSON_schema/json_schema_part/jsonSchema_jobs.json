@@ -1,0 +1,47 @@
+{
+	"description": "List of object about a jobs that the person has been do. For each job, it will be precise by the company name, the role in the company, the title of the mission, the start and end date. If some skills are stated, list them. A skill can be anything related at the person. If more indication is about the job, put it in specification. It will be compose by all jobs in the resume.",
+	"type": "object",
+	"properties": { 	
+		"jobs":{
+			"type": "array",
+			"description": "List of informations about job",
+			"items": {
+				"type": "object",
+				"description": "Description about the job",
+				"properties": {
+					"company_name": {
+						"type": "string",
+						"description": "Name of the company"
+					},
+					"person_role":{
+						"type": "string",
+						"description": "Role in the company"
+					},
+					"title":{
+						"type": "string",
+						"description": "Goal of the mission job"
+					},
+					"start_date": {
+						"type": "string",
+						"description": "Start date in the company with year and month"
+					},
+					"end_date": {
+						"type": "string",
+						"description": "End date in the company with year and month, other if currently in the company not precise the end of date"
+					},
+					"skills":{
+						"type": "array",
+						"description": "All skills use during the time in the company",
+						"items":{
+							"type": "string"
+						}
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the job"
+					}
+				}
+			}
+		}
+    }
+}

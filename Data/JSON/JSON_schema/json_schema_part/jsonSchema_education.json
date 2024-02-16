@@ -1,0 +1,36 @@
+{
+	"description": "List of object about education schools and degree. For each school, it will be precise the name of the school, the degree, the start and end year. If more indication is about the school, put it in specification.",
+	"type": "object",
+	"properties": { 
+		"educations": {
+			"type": "array",
+			"description": "List of informations about school",
+			"items": {
+				"type": "object",
+				"description": "Description about the school",
+				"properties": {
+					"school_name": {
+						"type": "string",
+						"description": "Name of the school"
+					},
+					"degree":{
+						"type": "string",
+						"description": "Degree maximum awarded of the school"
+					},
+					"start_year":{
+						"type": "string",
+						"description": "First year in the school"
+					},
+					"end_year":{
+						"type": "string",
+						"description": "Last year in the school"
+					},
+					"specification":{
+						"type": "string",
+						"description": "All other specifications or specialities about the school"
+					}
+				}
+			}
+		}
+    }
+}

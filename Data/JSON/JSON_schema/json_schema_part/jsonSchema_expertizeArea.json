@@ -1,0 +1,32 @@
+{
+	"description": "List of object about expertize's areas obtained by the person. For each expertize, you will supply tools used and numbers years of experiences.",
+	"type": "object",
+	"properties": { 
+		"areas_expertize": {
+			"type": "array",
+			"description": "All area of expertize exercised by the person",
+			"items":{
+				"type": "object",
+				"description": "Description about the area of expertize",
+				"properties": {
+					"area_expertize": {
+						"type": "string",
+						"description": "Name of the area of expertize"
+					},
+					"tools": {
+						"type": "array",
+						"description": "Name of the area of expertize",
+						"items":{
+							"type": "string",
+							"description": "Tools like FMEA, Fault tree, reliability calculation..."
+						}
+					},
+					"years":{
+						"type": "string",
+						"description": "Number of years excercise the area of expertize"
+					}
+				}
+			}
+		}
+    }
+}

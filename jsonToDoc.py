@@ -1,24 +1,35 @@
+import json 
+
 from docx import Document
 from docx.shared import Pt
 from docx.enum.text import WD_PARAGRAPH_ALIGNMENT
 from docx.shared import Inches
 from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT, WD_ALIGN_VERTICAL
-import json 
+from variable import LOGO_VIATTECH, FOLDER_DOCX, FOLDER_JSON
 
 
 
-def create_template(file_path, json_file):
+def create_template(filename):
+    print("################################### JSON To DOCX #####################################")
+
     ########### JSON file ##################
-    f = open(json_file)
-    jsonFile = json.load(f)
-    f.close()
-    personal_information = jsonFile["personal_information"]
-    areas_expertise_name = [areas_expertise["area_expertise"] for areas_expertise in personal_information["areas_expertise"]]
-    dialectes_know = [dialectes_know["dialecte"] for dialectes_know in personal_information["dialecte_know"]]
-    education_information = jsonFile["education_school"]
-    realized_jobs = jsonFile["realised_jobs"]
+    folder = FOLDER_JSON + '/' + filename + '/'
     
     
+    personal_information = json.load(open(folder + 'personalInformation.json'))['personal_information']
+    areas_expertize = json.load(open(folder + 'expertizeArea.json'))['areas_expertize']
+    dialectes = json.load(open(folder + 'dialecte.json'))['dialectes']
+    education = json.load(open(folder + 'education.json'))['educations']
+    jobs = json.load(open(folder + 'jobs.json'))['jobs']
+    softskills = json.load(open(folder + 'softSkills.json'))['softskills']
+    hardskills = json.load(open(folder + 'hardSkills.json'))['hardskills']
+    standards = json.load(open(folder + 'standards.json'))['standards']
+    software = json.load(open(folder + 'software.json'))['softwares']
+    
+    
+    areas_expertize_name = [area_expertize['area_expertize'] for area_expertize in areas_expertize]
+    software_name = ['\n'.join(sw['software']) for sw in software]
+    dialecte_name = [dialecte['dialecte'] for dialecte in dialectes]
     
     ########### DOCX file ##################
 
@@ -43,7 +54,7 @@ def create_template(file_path, json_file):
 
     # Add the image to the left cell
     run_image = cell_image.paragraphs[0].add_run()
-    run_image.add_picture('../Data/image/viattech_qs_logo.png', width=Inches(1.0))  # Replace 'your_image_path.jpg' with the actual image path
+    run_image.add_picture(LOGO_VIATTECH, width=Inches(1.0))  # Replace 'your_image_path.jpg' with the actual image path
 
     # Add the title to the right cell
     run_title = cell_title.paragraphs[0].add_run("Dossier Technique")
@@ -80,8 +91,8 @@ def create_template(file_path, json_file):
 
     # Define the list of points for the left side of the table
     competences_points = ["Secteur", "Methodologies", "Domaine", "Normes", "Logiciels", "Langues"]
-    competences_points_had = [areas_expertise_name, jsonFile["softskills"], jsonFile["hardskills"],
-                              jsonFile["standards"], jsonFile["softwares"], dialectes_know]
+    competences_points_had = [areas_expertize_name, softskills, hardskills,
+                              standards, software_name, dialecte_name]
 
     # Populate the left side of the table with the points
     for row_index in range(len(competences_points)):
@@ -94,23 +105,24 @@ def create_template(file_path, json_file):
     # Add a title "Formation"
     doc.add_heading('Formation', level=1)
         
-    lengthEducation = len(education_information)
+    lengthEducation = len(education)
     schools_table = doc.add_table(rows=lengthEducation, cols=2)
+    
     
     rows = range(0, lengthEducation)
     for row_index in rows:
-        education = education_information[row_index]
+        education_row = education[row_index]
         cell = schools_table.cell(row_index, 0)
-        cell.text = education["graduation_year"]
+        cell.text = education_row["end_year"]
         cell = schools_table.cell(row_index, 1)
-        cell.text = ", ".join([education["school_name"], education["degree"]])
+        cell.text = ", ".join([education_row["school_name"], education_row["degree"]])
         
 
     # Add a title "Projets"
     doc.add_heading('Projets', level=1)
 
     # Iterate through each job in the JSON object
-    for job in realized_jobs:
+    for job in jobs:
         # Add company_name as the title to the left
         doc.add_heading(job["company_name"], level=2)
 
@@ -134,5 +146,5 @@ def create_template(file_path, json_file):
 
 
     # Save the document
-    doc.save(file_path)
-    print(f"Template créé et enregistré sous '{file_path}'")
+    doc.save(FOLDER_DOCX + '/DT_' + personal_information["firstname"] +'_' + personal_information["lastname"] + '.docx')
+    print("Template créé et enregistré sous : ", FOLDER_DOCX + '/DT_' + personal_information["firstname"] +'_' + personal_information["lastname"] + '.docx')
