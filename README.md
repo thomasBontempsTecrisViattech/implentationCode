@@ -48,12 +48,25 @@ Pour éviter des erreurs, je vous invite à l'installer avec conda comme suit :
 conda install poppler
 ``
 
+### 3. Set-up API Key open-ai
 
-### 3. Modifier le fichier variable.py
+Ouvrir le command prompt (**cmd**)
+
+Utiliser la commande suivante pour mettre en place l'API Key :  
+``
+setx OPENAI_API_KEY "your-api-key-here"
+``  
+
+Pour un setup permanent, il est possible de le mettre dans les variables d'environnements. 
+
+Autrement, il faut utiliser un fichier '.env' où stocker sa variable. Je vous invite à vous rendre sur la [plateforme](https://platform.openai.com/docs/quickstart?context=python) pour comprendre comment réaliser cette étape. 
+
+
+### 4. Modifier le fichier variable.py
 Il est impératif de changer les variables afin que cela corresponde à votre dossier. 
 
 
-### 4. Lancer le programme
+### 5. Lancer le programme
 Pour lancer le programme, veuillez réaliser cette commande : 
 
 ``
