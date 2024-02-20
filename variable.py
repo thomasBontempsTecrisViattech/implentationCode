@@ -18,3 +18,5 @@ FOLDER_JSON_SCHEMA = PATH + 'implentationCode/Data/JSON/JSON_schema/json_schema_
 # Element besoin pour le DT
 LOGO_VIATTECH = PATH + 'implentationCode/Data/image/viattech_qs_logo.png' # Logo viattech à utiliser lors de la création du dossier technique
 
+# Assistant id openai
+ASSISTANT_ID='asst_n0W7oB6YhyO5kvA8Oa3u8Sm2'
