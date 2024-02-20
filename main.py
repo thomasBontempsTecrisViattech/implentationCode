@@ -2,7 +2,7 @@ import os
 import json
 
 from multiprocessing import Process, freeze_support
-from variable import FOLDER_RESUME, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA
+from variable import FOLDER_RESUME, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA, FOLDER_DONE
 from resumeToJson import resumeToJson
 from jsonToDoc import create_template
 
@@ -20,7 +20,7 @@ def main():
     print("\n\nVérifier que les variables correspondent à votre environnement")
     
     print("\n\nCréation des dossiers :")
-    init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA])     
+    init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA, FOLDER_DONE])     
     
     
     print("\n\nPour que le programme se lance, il faut obligatoirement 1 CV au format pdf dans le dossier : " + FOLDER_RESUME)
@@ -41,7 +41,9 @@ def main():
             
             print("\n\n#################### Conversion de JSON en DOCX #############################\n")
             
-            create_template(pdf_file[:-4])
+            created = create_template(pdf_file[:-4])
+            if created:
+                os.replace(FOLDER_RESUME + '/' + pdf_file, FOLDER_DONE + '/' + pdf_file)
     else:
         print("Pas de CV au format pdf dans le dossier : ", FOLDER_RESUME, "\npdf_files = ", pdf_files)
         
