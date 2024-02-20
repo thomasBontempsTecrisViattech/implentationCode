@@ -35,7 +35,7 @@ def main():
     if pdf_files:
         for pdf_file in pdf_files:
             created = False
-            print("\nPrise en charge du fichier : ", pdf_file)
+            print("\n\nPrise en charge du fichier : ", pdf_file)
             
             text_from_pdf = extract_content_from_pdf(FOLDER_RESUME + '/' + pdf_file)
             with open(FOLDER_TXT + '/' + pdf_file[:-4] + '.txt', "w+") as text_file:
@@ -50,12 +50,12 @@ def main():
                 
                     print("\nTraitement du schema : ", json_schema_part_file,"\n")
                     resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file, content=text_from_pdf)    
-                
-                print("\n\n#################### Conversion de JSON en DOCX #############################\n")
-            
-                created = create_template(pdf_file[:-4])
             else:
                 get_json_from_text(filename=pdf_file, json_schema_files=json_schema_part_files)
+            
+            
+            print("\n\n#################### Conversion de JSON en DOCX #############################\n")
+            created = create_template(pdf_file[:-4])
             if created:
                 os.replace(FOLDER_RESUME + '/' + pdf_file, FOLDER_DONE + '/' + pdf_file)
             
