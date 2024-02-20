@@ -1,6 +1,6 @@
 {
 	"name":"dialectes",
-	"description": "List of object about common languages used by the person in the resume. It will precise the level for each dialecte",
+	"description": "List common languages used by the person in the resume. It will precise the level for each dialecte",
 	"type": "object",
 	"properties": {                
 		"dialectes": {

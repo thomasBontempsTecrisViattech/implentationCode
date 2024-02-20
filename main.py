@@ -59,7 +59,6 @@ def main():
             if created:
                 os.replace(FOLDER_RESUME + '/' + pdf_file, FOLDER_DONE + '/' + pdf_file)
             
-            break
     else:
         print("Pas de CV au format pdf dans le dossier : ", FOLDER_RESUME, "\npdf_files = ", pdf_files)
         

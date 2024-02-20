@@ -1,0 +1,113 @@
+COORDOONEES
+
+[+] 13100, Aix en Provence
+E belghitidina@gmail.com
++33.7.54.28.79.50
+
+[in] Idina-daha-belghiti
+
+COMPETENCES
+
+Matlab, Simulink
+Fiix (CMMS), C, C++
+Creo, CATIA V5
+Step 7, Kibana
+
+Python, ROS
+
+o
+
+25 5 7,5
+
+LANGUES
+
+Anglais : TOEIC (900/990)
+Francais : Bilingue
+
+Arabe : Bilingue
+
+Espagnol : A2
+
+CERTIFICATIONS
+
+Habilitation electrique basse tension
+BE/ BR (NF C18510)
+
+Securite Secouriste au Travail (SST)
+
+Equipier de premiere intervention
+
+CENTRES D'INTERET
+
+Volontariat, Voyage, Natation, Karate
+
+DINA DAHA BELGHITI
+
+INGENIEUREEN AUTOMATIQUE ET
+ROBOTIQUE
+
+Curieuse de nature, determinee et toujours prete pour un nouveau challenge
+
+FORMATION
+
+Polytech Orleans | 2018 - 2019
+Data mining : Extraction et visualisation de donnees via Python
+
+Polytech Orleans | 2017- 2019
+Master MARS (Mecatronique, Automatique, Robotique, Signal)
+
+Faculte des Sciences et Techniques | 2017
+Licences Sciences et Techniques : Conception et Analyse
+Mecanique
+
+EXPERIENCES PROFESIONNELLES
+
+SAFT Bordeaux | Septembre 2022 - Present
+
+Ingenieure de surete de fonctionnement dans le secteur ferroviaire
+
+- Definition d'un plan de surete conformement aux exigences client : Realisation
+des dossiers de securite pour des batteries Ni-Cd/ Lithium
+
+- Certification et evaluation, des etudes de disponibilite et de maintenabilite des
+systemes
+
+- Realiser les taches/ documentations techniques conformement aux modeles de
+prestation definis
+
+Ocado Engineering Paris | Fevrier 2020 - Aout 2022
+
+Ingenieure pilote de maintenance d'un entrepot robotise
+
+- Maintenance reactive et preventive des robots mobiles
+
+- Extraction et analyse de donnees pour de la maintenance preventive
+- Responsable de l'organisation des formations HSE
+
+- Responsable de formation en France, Suede et UK
+
+Laboratoire PRISME Orleans | Mars 2019 - Novembre 2019
+
+Ingenieure stagiaire en R &D : Modelisation et controle predictif d'une
+
+combustion d'un moteur HCCI par ajout d'Ozone
+
+- Analyse, modelisation et identification des systemes non lineaires
+
+- Conception d'une commande predictive, optimale et robuste sur Matlab/
+Simulink
+
+- Validation et application sur les bancs d'essai
+
+OCP (Stage PFE) | Avril - Juillet 2017
+- Le dimensionnement d'une station de pompage
+- Reduire les couts necessaires des interventions par les societes de maintenance
+
+COMPETENCES ET PROJETS
+
+- Projet Collaboratif : Developpement d'un outil de localisation et navigation
+d'un robot mobile a l'aide de ROS/V-rep suivi de trajectoire sur Matlab/Simulink
+
+- Formation Udemy : Modelisation et controle predictif d'un drone UAV,
+systemes d'espace d'etat et simulation Python
+

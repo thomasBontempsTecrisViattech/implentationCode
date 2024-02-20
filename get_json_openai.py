@@ -12,19 +12,21 @@ client = OpenAI()
 
 def get_json_from_text(filename, json_schema_files):
     
-    # Delete files in the assistant    
-    list_files_assistant = client.beta.assistants.files.list(
-        assistant_id=ASSISTANT_ID
-    )
-    print(list_files_assistant)
-    
-    for file_assistant in list_files_assistant:
-        print(file_assistant)
-        client.beta.assistants.files.delete(
-            assistant_id=ASSISTANT_ID,
-            file_id=file_assistant.id,
+    try:
+        # Delete files in the assistant    
+        list_files_assistant = client.beta.assistants.files.list(
+            assistant_id=ASSISTANT_ID
         )
-    
+        print(list_files_assistant)
+        
+        for file_assistant in list_files_assistant:
+            print(file_assistant)
+            client.beta.assistants.files.delete(
+                assistant_id=ASSISTANT_ID,
+                file_id=file_assistant.id,
+            )
+    except:
+        pass
     # Load text file in assistant
     file_loaded = client.files.create(
         file=open(FOLDER_TXT + '/' + filename[:-3] + 'txt', "rb"),
