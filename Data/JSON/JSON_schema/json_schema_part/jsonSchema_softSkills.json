@@ -1,4 +1,5 @@
 {
+	"name":"softskills",
 	"description": "Get a list of soft skill obtained by the person. A soft skill is a character traits or a common sense, something as social skills.",
 	"type": "object",
 	"properties": { 		

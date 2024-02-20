@@ -1,4 +1,5 @@
 {
+	"name":"personal_information",
 	"description": "Informations personal about the person in the resume. It will contain the firstname, lastname, age, living address and the role desired by the person",
 	"type": "object",
 	"properties": {                

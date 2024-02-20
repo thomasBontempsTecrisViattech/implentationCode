@@ -66,7 +66,14 @@ Autrement, il faut utiliser un fichier '.env' où stocker sa variable. Je vous i
 Il est impératif de changer les variables afin que cela corresponde à votre dossier. 
 
 
-### 5. Lancer le programme
+### 5. Créer un assistant OpenAI
+Veuiller suivre le fichier **creationTypeAssistantOpenAi.ipynb** pour créer l'assistant voulu. Pour lancer ce programme, il est primordiale d'ajouter la libraires *jupyter* dans votre environnement avec la commande:  
+``
+pip install jupyter
+``
+
+
+### 6. Lancer le programme
 Pour lancer le programme, veuillez réaliser cette commande : 
 
 ``

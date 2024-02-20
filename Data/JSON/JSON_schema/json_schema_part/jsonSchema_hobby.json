@@ -1,4 +1,5 @@
 {
+	"name":"hobbies",
 	"description": "List of person's pastime. An activity others than the work which the person enjoyed to do.",
 	"type": "object",
 	"properties": { 		

@@ -1,4 +1,5 @@
 {
+	"name":"computer_languages",
 	"description": "List of computer languages that the person has been used during their career.",
 	"type": "object",
 	"properties": { 
