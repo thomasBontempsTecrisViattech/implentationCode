@@ -16,8 +16,10 @@ def get_json_from_text(filename, json_schema_files):
     list_files_assistant = client.beta.assistants.files.list(
         assistant_id=ASSISTANT_ID
     )
+    print(list_files_assistant)
     
     for file_assistant in list_files_assistant:
+        print(file_assistant)
         client.beta.assistants.files.delete(
             assistant_id=ASSISTANT_ID,
             file_id=file_assistant.id,
@@ -25,7 +27,7 @@ def get_json_from_text(filename, json_schema_files):
     
     # Load text file in assistant
     file_loaded = client.files.create(
-        file=open(FOLDER_TXT + '/' + filename, "rb"),
+        file=open(FOLDER_TXT + '/' + filename[:-3] + 'txt', "rb"),
         purpose='assistants'
     )
     client.beta.assistants.files.create(
@@ -37,7 +39,7 @@ def get_json_from_text(filename, json_schema_files):
     thread = client.beta.threads.create()
     
     # What we ask to Assistant
-    content = "Extract information from the file to obtain the JSON schema as follow : \n{json_schema}\n\nOnly the json."
+    content = "Extract information from the document to obtain a JSON file corresponding to the following JSON schema:\n{json_schema}\n\nGive me the json file only"
     
     # Où seront stocké les fichiers
     folder_stock_json = FOLDER_JSON + '/' + filename[:-4] 
@@ -77,11 +79,15 @@ def get_json_from_text(filename, json_schema_files):
         )
         
         message = messages.data[0]
-        json_data = json.dumps(message.content[0].text.value)
-        
+        json_data = {}
+        if message.content[0].text.value != "":
+            json_data = json.loads(message.content[0].text.value)        
         with open(folder_stock_json + '/' + json_schema_file.split('_')[1], 'w') as json_file:
-            json_file.write(json_data)
-            
+            json.dump(json_data, json_file)
+
+    client.beta.threads.delete(
+        thread_id=thread.id
+    )    
     return True
 
     
