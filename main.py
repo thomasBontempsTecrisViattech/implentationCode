@@ -28,10 +28,10 @@ def main():
     pdf_files = [file for file in os.listdir(FOLDER_RESUME) if file.lower().endswith('.pdf')]
     json_schema_part_files = [json_schema_file for json_schema_file in os.listdir(FOLDER_JSON_SCHEMA) if json_schema_file.lower().endswith('.json')]
     
+    ("\n\n#################### Conversion de PDF en JSON #############################")
     if pdf_files:
         for pdf_file in pdf_files:
             created = False
-            print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
             text_from_pdf = extract_content_from_pdf(FOLDER_RESUME + '/' + pdf_file)
@@ -40,7 +40,8 @@ def main():
                 
             print("\nLe document pdf a bien été transformé en fichier texte\n")
             
-            if input("\nQuel méthode souhaitez-vous utiliser pour ") == '1':
+            API_choice = input("\nQuel méthode souhaitez-vous utiliser pour parser le document (1 ou 2) : \n1. Avec un modèle en local\n2. Avec l'API OpenAI\n\nReponse : ") 
+            if API_choice == '1':
                 for json_schema_part_file in json_schema_part_files:
                     with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
                         json_schema = json.load(json_file)
@@ -55,6 +56,8 @@ def main():
                 pass
             if created:
                 os.replace(FOLDER_RESUME + '/' + pdf_file, FOLDER_DONE + '/' + pdf_file)
+            
+            break
     else:
         print("Pas de CV au format pdf dans le dossier : ", FOLDER_RESUME, "\npdf_files = ", pdf_files)
         
@@ -66,5 +69,6 @@ def main():
     
 
 if __name__ == '__main__':
-    freeze_support()
-    Process(target=main).start()
+    #freeze_support()
+    #Process(target=main).start()
+    main() # Le multiprocessing empêche la lecture d'input
