@@ -65,7 +65,7 @@ def get_json_from_text(filename, json_schema_files):
         
         while run.status != "completed":
             time.sleep(0.5)
-            # Reload la session
+            # Reload la session pour récupérer la réponse
             run = client.beta.threads.runs.retrieve( 
                 thread_id = thread.id,
                 run_id = run.id
