@@ -30,6 +30,7 @@ def main():
     
     if pdf_files:
         for pdf_file in pdf_files:
+            created = False
             print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
@@ -39,7 +40,7 @@ def main():
                 
             print("\nLe document pdf a bien été transformé en fichier texte\n")
             
-            if input() == '1':
+            if input("\nQuel méthode souhaitez-vous utiliser pour ") == '1':
                 for json_schema_part_file in json_schema_part_files:
                     with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
                         json_schema = json.load(json_file)
