@@ -2,15 +2,13 @@ import time
 import json
 import os
 
-from exctractFromPdf import extract_content_from_pdf
 from generateJsonFromResume import extract_structured_data
-from variable import FOLDER_RESUME, FOLDER_JSON
+from variable import FOLDER_TXT, FOLDER_JSON
 
 
 
-def resumeToJson(json_filename, json_schema, file_input):
+def resumeToJson(json_filename, json_schema, file_input, content):
     start_time = time.time()  # Record the start time
-    content = extract_content_from_pdf(FOLDER_RESUME + '/' + file_input)
     data = extract_structured_data(content, json_schema)
     json_data = json.dumps(data)
     folder_stock_json = FOLDER_JSON + '/' + file_input[:-4] 

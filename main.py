@@ -2,8 +2,9 @@ import os
 import json
 
 from multiprocessing import Process, freeze_support
-from variable import FOLDER_RESUME, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA, FOLDER_DONE
+from variable import FOLDER_RESUME, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA, FOLDER_DONE, FOLDER_TXT
 from resumeToJson import resumeToJson
+from extractFromPdf import extract_content_from_pdf
 from jsonToDoc import create_template
 
 def init_folder(folders):
@@ -20,7 +21,7 @@ def main():
     print("\n\nVérifier que les variables correspondent à votre environnement")
     
     print("\n\nCréation des dossiers :")
-    init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA, FOLDER_DONE])     
+    init_folder([FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA, FOLDER_DONE, FOLDER_TXT])     
     
     
     print("\n\nPour que le programme se lance, il faut obligatoirement 1 CV au format pdf dans le dossier : " + FOLDER_RESUME)
@@ -32,16 +33,25 @@ def main():
             print("\n\n#################### Conversion de PDF en JSON #############################")
             print("\nPrise en charge du fichier : ", pdf_file)
             
-            for json_schema_part_file in json_schema_part_files:
-                with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
-                    json_schema = json.load(json_file)
+            text_from_pdf = extract_content_from_pdf(FOLDER_RESUME + '/' + pdf_file)
+            with open(FOLDER_TXT + '/' + pdf_file[:-4] + '.txt', "w+") as text_file:
+                text_file.write(text_from_pdf)
+                
+            print("\nLe document pdf a bien été transformé en fichier texte\n")
             
-                print("\nTraitement du schema : ", json_schema_part_file,"\n")
-                resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file)    
+            if input() == '1':
+                for json_schema_part_file in json_schema_part_files:
+                    with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
+                        json_schema = json.load(json_file)
+                
+                    print("\nTraitement du schema : ", json_schema_part_file,"\n")
+                    resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file, content=text_from_pdf)    
+                
+                print("\n\n#################### Conversion de JSON en DOCX #############################\n")
             
-            print("\n\n#################### Conversion de JSON en DOCX #############################\n")
-            
-            created = create_template(pdf_file[:-4])
+                created = create_template(pdf_file[:-4])
+            else:
+                pass
             if created:
                 os.replace(FOLDER_RESUME + '/' + pdf_file, FOLDER_DONE + '/' + pdf_file)
     else:
