@@ -1,0 +1,7 @@
+{"educations": [
+    {"school_name": "University of Cranfield, United Kingdom", 
+    "degree": "Master in Aerospace Engineering", "start_year": "October 2019", 
+    "end_year": "September 2020", "specification": "Courses in orbital mechanics, space systems engineering, space propulsion, space communication, dynamics modeling, system control, aerospace navigation, and sensors. Group project: Designing a space mission concept to contribute to active debris removal in response to the European Space Agency's Space Safety Mission Call."}, 
+    {"school_name": "ECAM Lyon, France", "degree": "Generalist Engineer", "start_year": "September 2017", 
+    "end_year": "July 2019", "specification": "Mechanical engineering courses including fluid mechanics, acoustics, mechanical design/CAO, materials, thermodynamics, electrical circuits, statistical analysis, and Lean Manufacturing."}, 
+    {"school_name": "Polytech Lyon Integrated Preparatory Classes", "start_year": "September 2015", "end_year": "July 2017", "specification": "Coursework in mathematics, physics, chemistry, mechanics, and computer science."}]}

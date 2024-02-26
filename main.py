@@ -1,7 +1,6 @@
 import os
 import json
 
-from multiprocessing import Process, freeze_support
 from variable import FOLDER_RESUME, FOLDER_DOCX, FOLDER_IMAGE, FOLDER_JSON, FOLDER_JSON_SCHEMA, FOLDER_DONE, FOLDER_TXT
 from resumeToJson import resumeToJson
 from extractFromPdf import extract_content_from_pdf

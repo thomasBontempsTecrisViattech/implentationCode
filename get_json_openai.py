@@ -11,7 +11,7 @@ load_dotenv()
 client = OpenAI()
 
 def get_json_from_text(filename, json_schema_files):
-    
+    # Ajouter un fichier (CV) à l'assistant
     try:
         # Delete files in the assistant    
         list_files_assistant = client.beta.assistants.files.list(
@@ -27,6 +27,7 @@ def get_json_from_text(filename, json_schema_files):
             )
     except:
         pass
+    
     # Load text file in assistant
     file_loaded = client.files.create(
         file=open(FOLDER_TXT + '/' + filename[:-3] + 'txt', "rb"),
@@ -82,10 +83,15 @@ def get_json_from_text(filename, json_schema_files):
         
         message = messages.data[0]
         json_data = {}
-        if message.content[0].text.value != "":
-            json_data = json.loads(message.content[0].text.value)        
-        with open(folder_stock_json + '/' + json_schema_file.split('_')[1], 'w') as json_file:
-            json.dump(json_data, json_file)
+        try:
+            val = message.content[0].text.value
+            if val != "":
+                val = val[val.find('{'):]
+                json_data = json.loads(val)        
+            with open(folder_stock_json + '/' + json_schema_file.split('_')[1], 'w') as json_file:
+                json.dump(json_data, json_file)
+        except:
+            pass
 
     client.beta.threads.delete(
         thread_id=thread.id
