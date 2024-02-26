@@ -52,7 +52,7 @@ def get_json_from_text(filename, json_schema_files):
         pass
     
     for json_schema_file in json_schema_files:
-        json_example = json.load(open(FOLDER_EXAMPLE) + '/' + json_schema_file.split('_')[1], 'r')
+        json_example = json.load(open(FOLDER_EXAMPLE + '/' + json_schema_file.split('_')[1], 'r'))
         json_schema = json.load(open(FOLDER_JSON_SCHEMA + '/' + json_schema_file, 'r'))
         content_formatted = content.format(json_schema=json_schema, example=json_example)
         
