@@ -2,7 +2,7 @@ import os
 import json
 import time
 
-from variable import ASSISTANT_ID, FOLDER_TXT, FOLDER_JSON_SCHEMA, FOLDER_JSON
+from variable import ASSISTANT_ID, FOLDER_TXT, FOLDER_JSON_SCHEMA, FOLDER_JSON, FOLDER_EXAMPLE
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -42,7 +42,7 @@ def get_json_from_text(filename, json_schema_files):
     thread = client.beta.threads.create()
     
     # What we ask to Assistant
-    content = "Extract information from the document to obtain a JSON file corresponding to the following JSON schema:\n{json_schema}\n\nGive me the json file only"
+    content = "Extract information from the document to obtain a JSON file corresponding to the following JSON schema:\n{json_schema}\n\nAn example output :\n{example}\n\nGive me the json file only"
     
     # Où seront stocké les fichiers
     folder_stock_json = FOLDER_JSON + '/' + filename[:-4] 
@@ -52,8 +52,9 @@ def get_json_from_text(filename, json_schema_files):
         pass
     
     for json_schema_file in json_schema_files:
+        json_example = json.load(open(FOLDER_EXAMPLE) + '/' + json_schema_file.split('_')[1], 'r')
         json_schema = json.load(open(FOLDER_JSON_SCHEMA + '/' + json_schema_file, 'r'))
-        content_formatted = content.format(json_schema=json_schema)
+        content_formatted = content.format(json_schema=json_schema, example=json_example)
         
         # Mise en place du message dans le thread
         client.beta.threads.messages.create(
