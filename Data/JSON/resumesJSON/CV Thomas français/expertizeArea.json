@@ -1,1 +1,6 @@
-{"areas_expertize": [{"area_expertize": "Data Science", "tools": ["Tensorflow", "PyTorch", "Hadoop", "Sparks", "SQL"], "years": "4"}, {"area_expertize": "Big Data", "tools": ["Spark", "Elastic Stack"], "years": "2"}, {"area_expertize": "Machine Learning", "tools": ["Machine Learning", "Deep Learning"], "years": "3"}, {"area_expertize": "Data Engineering", "tools": ["Sparks", "Oozie", "Power BI"], "years": "2"}]}
+{"areas_expertize": [
+    {"area_expertize": "Data Science", 
+    "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "C/C++", "Java", "Hadoop", "Sparks", "SQL", "Angular", "NodeJS"], "years": "3"}, 
+    {"area_expertize": "Machine Learning", "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "SQL"], "years": "2"}, 
+    {"area_expertize": "Deep Learning", "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "SQL"], "years": "2"}, 
+    {"area_expertize": "Artificial Intelligence", "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch"], "years": "2"}]}

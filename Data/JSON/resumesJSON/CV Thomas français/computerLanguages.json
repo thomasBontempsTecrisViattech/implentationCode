@@ -1,1 +1,1 @@
-{"name": "computer_languages", "description": "List of computer languages that the person has been used during their career.", "type": "object", "properties": {"computer_languages": {"type": "array", "items": {"type": "string"}}}, "computer_languages": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "C/C++", "Java", "Hadoop", "Sparks", "SQL", "Angular", "NodeJS"]}
+{"computer_languages": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "C/C++", "Java", "Hadoop", "Sparks", "SQL", "Angular", "NodeJS"]}

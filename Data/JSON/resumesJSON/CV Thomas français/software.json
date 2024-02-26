@@ -1,1 +1,1 @@
-{"softwares": [{"category": "Development", "software": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "C/C++", "Java", "Hadoop", "Sparks", "SQL", "Angular", "NodeJS"]}]}
+{"softwares": [{"category": "Development", "software": ["Python", "C/C++", "Java", "Hadoop", "Sparks", "Angular", "NodeJS", "SQL"]}, {"category": "Big Data", "software": ["Elastic Stack"]}]}

@@ -42,7 +42,7 @@ def get_json_from_text(filename, json_schema_files):
     thread = client.beta.threads.create()
     
     # What we ask to Assistant
-    content = "Extract information from the document to obtain a JSON file corresponding to the following JSON schema:\n{json_schema}\n\nAn example output :\n{example}\n\nGive me the json file only"
+    content = "Extract information from the document to obtain a JSON file corresponding to the following JSON schema:\n{json_schema}\n\nExample output but nothing should appear :\n{example}\n\nGive me the json file only"
     
     # Où seront stocké les fichiers
     folder_stock_json = FOLDER_JSON + '/' + filename[:-4] 
