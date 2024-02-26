@@ -1,0 +1,6 @@
+{"areas_expertize": [
+    {"area_expertize": "Surete de fonctionnement", 
+    "tools": ["FMEA", "Fault tree analysis", "Reliability calculation"], "years": "2"}, 
+    {"area_expertize": "Maintenance industrielle", "tools": ["Fiix (CMMS)"], "years": "2"}, 
+    {"area_expertize": "Automatisation", "tools": ["Step 7", "Kibana"], "years": "2"}, 
+    {"area_expertize": "Robotique", "tools": ["ROS"], "years": "2"}]}

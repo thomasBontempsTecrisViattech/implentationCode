@@ -10,6 +10,7 @@ FOLDER_TXT = PATH + 'implentationCode/Data/TXT/' # Dossier pour les fichier pdf 
 FOLDER_JSON = PATH + 'implentationCode/Data/JSON/resumesJSON/' # Dossier où stocker les CV sous formes JSON
 FOLDER_DOCX = PATH + 'implentationCode/Data/DOCX/' # Dossier où les fichiers DOCX seront stockés
 FOLDER_IMAGE = PATH + 'implentationCode/Data/imgPdfPages/' # Dossier provisoire où les CV pdf sont stockés sous forme d'image
+FOLDER_EXAMPLE = PATH + 'implentationCode/JSON/JSON_schema/example_format' # Dossier provisoire où les CV pdf sont stockés sous forme d'image
 FOLDER_DONE = PATH + 'implentationCode/Data/Done/' # Dossier où les fichiers traités 
 
 # Dossier où se situe le schéma JSON décomposé. 

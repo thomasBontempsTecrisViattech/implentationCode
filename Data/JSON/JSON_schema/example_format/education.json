@@ -1,0 +1,6 @@
+{"educations": [
+    {"school_name": "Polytech Orleans", "degree": "Data mining : Extraction et visualisation de donnees via Python", 
+    "start_year": "2018", "end_year": "2019", "specification": ""}, 
+    {"school_name": "Polytech Orleans", "degree": "Master MARS (Mecatronique, Automatique, Robotique, Signal)", 
+    "start_year": "2017", "end_year": "2019", "specification": ""}, {"school_name": "Faculte des Sciences et Techniques", 
+    "degree": "Licences Sciences et Techniques : Conception et Analyse Mecanique", "start_year": "2017", "end_year": "2017", "specification": ""}]}
