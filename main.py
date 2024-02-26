@@ -34,23 +34,23 @@ def main():
     if pdf_files:
         for pdf_file in pdf_files:
             created = False
-            print("\n\nPrise en charge du fichier : ", pdf_file)
+            # print("\n\nPrise en charge du fichier : ", pdf_file)
             
-            text_from_pdf = extract_content_from_pdf(FOLDER_RESUME + '/' + pdf_file)
-            with open(FOLDER_TXT + '/' + pdf_file[:-4] + '.txt', "w+") as text_file:
-                text_file.write(text_from_pdf)
+            # text_from_pdf = extract_content_from_pdf(FOLDER_RESUME + '/' + pdf_file)
+            # with open(FOLDER_TXT + '/' + pdf_file[:-4] + '.txt', "w+") as text_file:
+            #     text_file.write(text_from_pdf)
                 
-            print("\nLe document pdf a bien été transformé en fichier texte\n")
+            # print("\nLe document pdf a bien été transformé en fichier texte\n")
             
-            if API_choice == '1':
-                for json_schema_part_file in json_schema_part_files:
-                    with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
-                        json_schema = json.load(json_file)
+            # if API_choice == '1':
+            #     for json_schema_part_file in json_schema_part_files:
+            #         with open(FOLDER_JSON_SCHEMA + '/' + json_schema_part_file) as json_file:
+            #             json_schema = json.load(json_file)
                 
-                    print("\nTraitement du schema : ", json_schema_part_file,"\n")
-                    resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file, content=text_from_pdf)    
-            else:
-                get_json_from_text(filename=pdf_file, json_schema_files=json_schema_part_files)
+            #         print("\nTraitement du schema : ", json_schema_part_file,"\n")
+            #         resumeToJson(json_filename=json_schema_part_file, json_schema=json_schema, file_input=pdf_file, content=text_from_pdf)    
+            # else:
+            #     get_json_from_text(filename=pdf_file, json_schema_files=json_schema_part_files)
             
             
             print("\n\n#################### Conversion de JSON en DOCX #############################\n")
