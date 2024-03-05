@@ -1,4 +1,5 @@
 {
+	"name":"expertize_area",
 	"description": "List of object about expertize's areas obtained by the person. For each expertize, you will supply tools used and numbers years of experiences.",
 	"type": "object",
 	"properties": { 

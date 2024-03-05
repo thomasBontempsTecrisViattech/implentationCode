@@ -1,0 +1,16 @@
+{"jobs": [
+    {"company_name": "Tecris", "person_role": "Data Scientist", "title": "Mise en place d'un ChatBot style GPT en interne", 
+    "start_date": "Dec 2023", "end_date": "aujourd'hui", "skills": ["Python", "Database Management", "Open-source Model Fine-tuning", "ChatBot Development"], 
+    "specification": "Creation d'une database afin de fine-tuner un modele open-source disponible sur Hugging Face."}, 
+    {"company_name": "Vedecom", "person_role": "Consultant R&D Data Science", 
+    "title": "Mise en place d'une exhaustivite des scenarios. Utilisation du Machine Learning et Deep Learning.", 
+    "start_date": "Oct 2022", "end_date": "Nov 2023", "skills": ["Machine Learning", "Deep Learning", "Scientific Paper Writing"], 
+    "specification": "Ecriture d'un papier scientifique a la suite de ce travail."}, 
+    {"company_name": "Sopra Steria", "person_role": "Data Engineer & Data Analyst", 
+    "title": "Data engineer & Data Analyst en BI Big Data", "start_date": "Nov 2021", "end_date": "Sept 2022", 
+    "skills": ["Dataframes", "Apache Spark", "Oozie", "Power BI", "Agile Methodology"], 
+    "specification": "Cela demande de la rigueur, des competences de communication et de la curiosite."}, 
+    {"company_name": "CCI", "person_role": "Data Analyst", 
+    "title": "Data Analyst chez CGI, j'ai concu une solution pour superviser les serveurs et recuperer les informations.", 
+    "start_date": "Mai 2021", "end_date": "Sept 2021", "skills": ["Data Analysis", "Server Monitoring", "Autonomy", "Rigor"], 
+    "specification": "Cela m'a demande de la rigueur, du serieux et de l'autonomie."}]}

@@ -1,4 +1,5 @@
 {
+	"name":"hardskills",
 	"description": "List of hard skill obtained by the person. A hard skill is a technical skill, not one that is interpersonal",
 	"type": "object",
 	"properties": { 		

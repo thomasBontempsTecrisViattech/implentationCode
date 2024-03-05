@@ -1,12 +1,18 @@
 import torch
 import os
 
+from dotenv import load_dotenv
+from openai import OpenAI
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from jsonFormer.jsonformer.main import Jsonformer
+
+load_dotenv()
 
 #os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
 torch.cuda.empty_cache() 
 os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "max_split_size_mb:512"
+
+client = OpenAI()
 
 class HuggingFaceLLM:
     # Model_name : databricks/dolly-v2-3b, 

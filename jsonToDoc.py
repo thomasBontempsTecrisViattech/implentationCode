@@ -96,10 +96,13 @@ def create_template(filename):
 
     # Populate the left side of the table with the points
     for row_index in range(len(competences_points)):
-        cell = competences_table.cell(row_index, 0)
-        cell.text = competences_points[row_index]
-        cell = competences_table.cell(row_index, 1)
-        cell.text = "\n".join(competences_points_had[row_index])
+        try:
+            cell = competences_table.cell(row_index, 0)
+            cell.text = competences_points[row_index]
+            cell = competences_table.cell(row_index, 1)
+            cell.text = "\n".join(competences_points_had[row_index])
+        except:
+            pass
 
 
     # Add a title "Formation"
@@ -111,11 +114,14 @@ def create_template(filename):
     
     rows = range(0, lengthEducation)
     for row_index in rows:
-        education_row = education[row_index]
-        cell = schools_table.cell(row_index, 0)
-        cell.text = education_row["end_year"]
-        cell = schools_table.cell(row_index, 1)
-        cell.text = ", ".join([education_row["school_name"], education_row["degree"]])
+        try:
+            education_row = education[row_index]
+            cell = schools_table.cell(row_index, 0)
+            cell.text = education_row["end_year"]
+            cell = schools_table.cell(row_index, 1)
+            cell.text = ", ".join([education_row["school_name"], education_row["degree"]])
+        except:
+            pass
         
 
     # Add a title "Projets"
@@ -123,28 +129,33 @@ def create_template(filename):
 
     # Iterate through each job in the JSON object
     for job in jobs:
-        # Add company_name as the title to the left
-        doc.add_heading(job["company_name"], level=2)
+        try:
+            # Add company_name as the title to the left
+            doc.add_heading(job["company_name"], level=2)
 
-        # Add start_date and end_date to the right of the title
-        date_text = f"{job['start_date']} - {job['end_date']}"
-        doc.add_paragraph(date_text).alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
+            # Add start_date and end_date to the right of the title
+            date_text = f"{job['start_date']} - {job['end_date']}"
+            doc.add_paragraph(date_text).alignment = WD_PARAGRAPH_ALIGNMENT.RIGHT
 
-        # Add person_role below the title
-        doc.add_paragraph(job["person_role"])
+            # Add person_role below the title
+            doc.add_paragraph(job["person_role"])
 
-        # Add specification below person_role
-        doc.add_paragraph(job["specification"])
+            # Add specification below person_role
+            doc.add_paragraph(job["specification"])
 
-        # Add skills as a list below specification
-        skills_list = doc.add_paragraph()
-        for skill in job["skills"]:
-            skills_list.add_run(f"• {skill}\n")
+            # Add skills as a list below specification
+            skills_list = doc.add_paragraph()
+            for skill in job["skills"]:
+                skills_list.add_run(f"• {skill}\n")
+        except:
+            pass
 
         # Add a blank line between jobs
         doc.add_paragraph()
+        
 
 
     # Save the document
     doc.save(FOLDER_DOCX + '/DT_' + personal_information["firstname"] +'_' + personal_information["lastname"] + '.docx')
     print("Template créé et enregistré sous : ", FOLDER_DOCX + '/DT_' + personal_information["firstname"] +'_' + personal_information["lastname"] + '.docx')
+    return True

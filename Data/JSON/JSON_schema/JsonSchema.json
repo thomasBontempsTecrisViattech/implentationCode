@@ -8,12 +8,10 @@
 			"properties": {
 				"firstname": {
 					"type": "string",
-					"title": "First name",
 					"description": "The person's first name"
 				},
 				"lastname": {
 					"type": "string",
-					"title": "Last name",
 					"description": "The person's last name"
 				},
 				"age": {
@@ -49,31 +47,33 @@
 				"isStudent": {
 					"type": "boolean",
 					"description": "Precision if the person is an actual student"
-				},
-				"areas_expertise": {
-					"type": "array",
-					"description": "All area of expertise exercised by the person",
-					"items":{
-						"type": "object",
-						"description": "Description about the area of expertise",
-						"properties": {
-							"area_expertise": {
-								"type": "string",
-								"description": "Name of the area of expertise"
-							},
-							"tools": {
-								"type": "array",
-								"description": "Name of the area of expertise",
-								"items":{
-									"type": "string",
-									"description": "Tools like FMEA, Fault tree, reliability calculation..."
-								}
-							},
-							"years":{
-								"type": "string",
-								"description": "Number of years excercise the area of expertise"
-							}
+				}
+			}
+		},
+
+		
+		"areas_expertise": {
+			"type": "array",
+			"description": "All area of expertise exercised by the person",
+			"items":{
+				"type": "object",
+				"description": "Description about the area of expertise",
+				"properties": {
+					"area_expertise": {
+						"type": "string",
+						"description": "Name of the area of expertise"
+					},
+					"tools": {
+						"type": "array",
+						"description": "Name of the area of expertise",
+						"items":{
+							"type": "string",
+							"description": "Tools like FMEA, Fault tree, reliability calculation..."
 						}
+					},
+					"years":{
+						"type": "string",
+						"description": "Number of years excercise the area of expertise"
 					}
 				}
 			}

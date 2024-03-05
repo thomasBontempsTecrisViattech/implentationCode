@@ -1,4 +1,5 @@
 {
+	"name":"softwares",
 	"description": "List of software's category development that the person has been using during their career. Software refers to a set of instructions or programs that are designed to perform specific tasks or functions on a computer system. It encompasses the entire range of electronically stored data and computer instructions, including applications, operating systems, utilities, and more. Software serves as an intermediary between the computer hardware and the user, enabling the execution of various operations and tasks.",
 	"type": "object",
 	"properties": {

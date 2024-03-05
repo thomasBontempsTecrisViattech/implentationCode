@@ -1,0 +1,6 @@
+{"areas_expertize": [
+    {"area_expertize": "Data Science", 
+    "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "C/C++", "Java", "Hadoop", "Sparks", "SQL", "Angular", "NodeJS"], "years": "3"}, 
+    {"area_expertize": "Machine Learning", "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "SQL"], "years": "2"}, 
+    {"area_expertize": "Deep Learning", "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch", "SQL"], "years": "2"}, 
+    {"area_expertize": "Artificial Intelligence", "tools": ["Python", "Tensorflow", "Pandas", "NumPy", "PyTorch"], "years": "2"}]}

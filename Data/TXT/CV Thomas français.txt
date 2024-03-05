@@ -1,0 +1,125 @@
+Thomas Bontemps
+DATA SCIENTIST
+
+bontoto44140@gmail.com
++33(0)7.67.86.05.66
+
+linkedin.com/in/thomasbontemps/
+
+En recherche d'un travail dans l'IA (Deep
+Learning)
+Permis de conduire
+
+COMPETENCES
+
+Langages informatique :
+- Python (Tensorflow, Pandas, NumPy,
+
+PyTorch)
+
+- C/C++
+
+- Java (Hadoop, Sparks)
+
+- Web (Angular, Node)JS, Front & Back)
+
+= SQL
+Big Data
+Elastic Stack
+
+EDUCATION
+
+Institut Superieur de l'electronique et
+du Numerique (ISEN) - Ecole
+d'ingenieur - 2017/2022
+Diplome d'une maitrise en ingenierie.
+J'ai ete delegue de classe pendant 3
+ans. Cette ecole ameliore les
+competences en maths, physiques,
+informatiques et leadership.
+
+VOLONTARIAT
+
+President de Human'isen - 2019-2021
+Human'ISEN etait une association
+d'etudiants a vocation humanitaire.
+Durant cette periode, j'ai du recruter
+de nouveaux membres, organiser
+des reunions et presider
+regulierement des conference.
+
+LANGUES
+
+Anglais (TOEIC : 835 --> B2)
+Debutant en chinois et espagnol
+
+INTERETS
+
+Jeux videos
+Films de science-fiction
+Tous les sports en general
+
+EXPERIENCES
+
+Data Scientist - Tecris - Dec 2023 a aujourd'hui
+
+Mise en place d'un ChatBot style GPT en
+interne.
+
+Creation d'une database afin de fine-tuner
+un modele open-source disponible sur
+Hugging Face.
+
+Consultant R&D Data Science chez Vedecom -
+
+Versailles - Oct 2022 - Nov 2023
+
+Mise en place d'une exhaustivite des
+scenarios. Utilisation du Machine Learning
+et Deep Learning.
+
+Ecriture d'un papier scientifique a la suite
+de ce travail.
+
+Alternance a Sopra Steria - Nantes - Nov 2021
+
+- Sept 2022
+Data engineer & Data Analyst en BI Big
+Data, j'ai cree des dataframes avec Sparks
+et Oozie en methode Agile. J'ai egalement
+cree des rendus via Power BI Cela
+demande de la rigueur, des competences
+de communication et de la curiosite.
+
+Stage a CCI - Nantes - Mai 2021 - Sept 2021
+Data Analyst chez CGI, j'ai concu une
+solution pour superviser les serveurs et
+recuperer les informations. J'etais en
+charge de tous les processus et j'ai cree un
+produit final pour le client. Cela m'a
+demande de la rigueur, du serieux et de
+l'autonomie.
+
+PROJETS
+
+Creation d'un reseau generatif NLP a photo
+
+Pojet personnel - 2022
+
+Un projet personnel permettant de creer
+une peinture a partir d'une entree texte. Ce
+projet permet d'utiliser les couches
+convolutives. De plus, il utilise le site web
+Kaggle pour recuperer l'ensemble des
+BDD. Cela demande de la recherche, de
+l'autonomie et de la motivation.
+
+Reconstruction de donnees partielles via
+
+Deep Learning - ISEN - 2021
+Un projet de 3 mois pour rechercher un
+reseau neuronal, le creer et le tester en
+python. Finalement, un reseau LSTM a ete
+deploye sur un site web. Cela demande de
+la rigueur, de la patience et de l'ecoute.
+
